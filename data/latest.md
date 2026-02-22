@@ -1,6 +1,6 @@
 # AI Daily Intel · 2026-02-22
 
-- 生成时间: `2026-02-22T03:03:28.082996+00:00`  - 新增条目: `0`  - 检查来源: `19`
+- 生成时间: `2026-02-22T04:07:23.730194+00:00`  - 新增条目: `56`  - 检查来源: `19`
 
 1. [Beyond the Prompt – Why and How to Fine-tune Your Own Models](https://devblogs.microsoft.com/foundry/beyond-the-prompt-why-and-how-to-fine-tune-your-own-models/) （Microsoft Foundry Blog / 相关性 70）
    - 摘要: <p>Large Language Models (LLMs) have reached a point where general intelligence is no longer the bottleneck. The real challenge in enterpris

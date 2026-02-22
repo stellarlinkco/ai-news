@@ -11,20 +11,20 @@ sources:
   rss:
     url: https://openai.com/news/rss.xml
     status: confirmed
-    checked_at: '2026-02-22T03:03:28.180986+00:00'
+    checked_at: '2026-02-22T04:07:23.814973+00:00'
     check_method: configured
     candidates: []
   crawl:
     mode: rss_or_html
     max_items: 20
   health:
-    last_success_at: '2026-02-22T03:03:28.180986+00:00'
+    last_success_at: '2026-02-22T04:07:23.814973+00:00'
     last_error: ''
     level: healthy
     consecutive_failures: 0
     cooldown_until: null
     last_status: ok
-    last_checked_at: '2026-02-22T03:03:28.180986+00:00'
+    last_checked_at: '2026-02-22T04:07:23.814973+00:00'
     retry_attempted: false
     retry_succeeded: false
     retry_count: 0
@@ -38,7 +38,7 @@ sources:
   rss:
     url: https://developers.openai.com/rss.xml
     status: confirmed
-    checked_at: '2026-02-22T03:03:28.179176+00:00'
+    checked_at: '2026-02-22T04:07:23.820928+00:00'
     check_method: configured
     candidates:
     - https://developers.openai.com/blog/rss.xml
@@ -48,13 +48,13 @@ sources:
     mode: rss_or_html
     max_items: 20
   health:
-    last_success_at: '2026-02-22T03:03:28.179176+00:00'
+    last_success_at: '2026-02-22T04:07:23.820928+00:00'
     last_error: ''
     level: healthy
     consecutive_failures: 0
     cooldown_until: null
     last_status: ok
-    last_checked_at: '2026-02-22T03:03:28.179176+00:00'
+    last_checked_at: '2026-02-22T04:07:23.820928+00:00'
     retry_attempted: false
     retry_succeeded: false
     retry_count: 0
@@ -68,7 +68,7 @@ sources:
   rss:
     url: null
     status: unknown
-    checked_at: '2026-02-22T03:03:57.500575+00:00'
+    checked_at: '2026-02-22T04:07:29.998577+00:00'
     check_method: http_probe
     candidates:
     - https://www.anthropic.com/engineering/rss.xml
@@ -78,13 +78,13 @@ sources:
     mode: rss_or_html
     max_items: 20
   health:
-    last_success_at: '2026-02-22T03:03:57.500575+00:00'
+    last_success_at: '2026-02-22T04:07:29.998577+00:00'
     last_error: ''
     level: healthy
     consecutive_failures: 0
     cooldown_until: null
     last_status: ok
-    last_checked_at: '2026-02-22T03:03:57.500575+00:00'
+    last_checked_at: '2026-02-22T04:07:29.998577+00:00'
     retry_attempted: false
     retry_succeeded: false
     retry_count: 0
@@ -98,7 +98,7 @@ sources:
   rss:
     url: null
     status: unknown
-    checked_at: '2026-02-22T03:03:30.740867+00:00'
+    checked_at: '2026-02-22T04:07:26.024982+00:00'
     check_method: http_probe
     candidates:
     - https://claude.com/blog/rss.xml
@@ -107,13 +107,13 @@ sources:
     mode: rss_or_html
     max_items: 20
   health:
-    last_success_at: '2026-02-22T03:03:30.740867+00:00'
+    last_success_at: '2026-02-22T04:07:26.024982+00:00'
     last_error: ''
     level: healthy
     consecutive_failures: 0
     cooldown_until: null
     last_status: ok
-    last_checked_at: '2026-02-22T03:03:30.740867+00:00'
+    last_checked_at: '2026-02-22T04:07:26.024982+00:00'
     retry_attempted: false
     retry_succeeded: false
     retry_count: 0
@@ -127,7 +127,7 @@ sources:
   rss:
     url: null
     status: unknown
-    checked_at: '2026-02-22T03:03:35.982475+00:00'
+    checked_at: '2026-02-22T04:07:29.977833+00:00'
     check_method: http_probe
     candidates:
     - https://manus.im/blog/rss.xml
@@ -136,13 +136,13 @@ sources:
     mode: rss_or_html
     max_items: 20
   health:
-    last_success_at: '2026-02-22T03:03:35.982475+00:00'
+    last_success_at: '2026-02-22T04:07:29.977833+00:00'
     last_error: ''
     level: healthy
     consecutive_failures: 0
     cooldown_until: null
     last_status: ok
-    last_checked_at: '2026-02-22T03:03:35.982475+00:00'
+    last_checked_at: '2026-02-22T04:07:29.977833+00:00'
     retry_attempted: false
     retry_succeeded: false
     retry_count: 0
@@ -157,7 +157,7 @@ sources:
   rss:
     url: https://blog.langchain.com/rss/
     status: confirmed
-    checked_at: '2026-02-22T03:03:28.189887+00:00'
+    checked_at: '2026-02-22T04:07:23.818739+00:00'
     check_method: configured
     candidates:
     - https://blog.langchain.com/rss/
@@ -167,13 +167,13 @@ sources:
     mode: rss_or_html
     max_items: 20
   health:
-    last_success_at: '2026-02-22T03:03:28.189887+00:00'
+    last_success_at: '2026-02-22T04:07:23.818739+00:00'
     last_error: ''
     level: healthy
     consecutive_failures: 0
     cooldown_until: null
     last_status: ok
-    last_checked_at: '2026-02-22T03:03:28.189887+00:00'
+    last_checked_at: '2026-02-22T04:07:23.818739+00:00'
     retry_attempted: false
     retry_succeeded: false
     retry_count: 0
@@ -187,7 +187,7 @@ sources:
   rss:
     url: https://huggingface.co/blog/feed.xml
     status: confirmed
-    checked_at: '2026-02-22T03:03:28.182267+00:00'
+    checked_at: '2026-02-22T04:07:23.818500+00:00'
     check_method: configured
     candidates:
     - https://huggingface.co/blog/feed.xml
@@ -196,13 +196,13 @@ sources:
     mode: rss_or_html
     max_items: 20
   health:
-    last_success_at: '2026-02-22T03:03:28.182267+00:00'
+    last_success_at: '2026-02-22T04:07:23.818500+00:00'
     last_error: ''
     level: healthy
     consecutive_failures: 0
     cooldown_until: null
     last_status: ok
-    last_checked_at: '2026-02-22T03:03:28.182267+00:00'
+    last_checked_at: '2026-02-22T04:07:23.818500+00:00'
     retry_attempted: false
     retry_succeeded: false
     retry_count: 0
@@ -216,7 +216,7 @@ sources:
   rss:
     url: https://github.blog/feed/
     status: confirmed
-    checked_at: '2026-02-22T03:03:28.189286+00:00'
+    checked_at: '2026-02-22T04:07:23.826244+00:00'
     check_method: configured
     candidates:
     - https://github.blog/feed/
@@ -225,13 +225,13 @@ sources:
     mode: rss_or_html
     max_items: 20
   health:
-    last_success_at: '2026-02-22T03:03:28.189286+00:00'
+    last_success_at: '2026-02-22T04:07:23.826244+00:00'
     last_error: ''
     level: healthy
     consecutive_failures: 0
     cooldown_until: null
     last_status: ok
-    last_checked_at: '2026-02-22T03:03:28.189286+00:00'
+    last_checked_at: '2026-02-22T04:07:23.826244+00:00'
     retry_attempted: false
     retry_succeeded: false
     retry_count: 0
@@ -245,7 +245,7 @@ sources:
   rss:
     url: https://blog.cloudflare.com/rss/
     status: confirmed
-    checked_at: '2026-02-22T03:03:28.189588+00:00'
+    checked_at: '2026-02-22T04:07:24.554731+00:00'
     check_method: configured
     candidates:
     - https://blog.cloudflare.com/rss/
@@ -253,13 +253,13 @@ sources:
     mode: rss_or_html
     max_items: 20
   health:
-    last_success_at: '2026-02-22T03:03:28.189588+00:00'
+    last_success_at: '2026-02-22T04:07:24.554731+00:00'
     last_error: ''
     level: healthy
     consecutive_failures: 0
     cooldown_until: null
     last_status: ok
-    last_checked_at: '2026-02-22T03:03:28.189588+00:00'
+    last_checked_at: '2026-02-22T04:07:24.554731+00:00'
     retry_attempted: false
     retry_succeeded: false
     retry_count: 0
@@ -273,7 +273,7 @@ sources:
   rss:
     url: https://vercel.com/atom
     status: confirmed
-    checked_at: '2026-02-22T03:03:28.186083+00:00'
+    checked_at: '2026-02-22T04:07:24.664078+00:00'
     check_method: configured
     candidates:
     - https://vercel.com/atom
@@ -282,13 +282,13 @@ sources:
     mode: rss_or_html
     max_items: 20
   health:
-    last_success_at: '2026-02-22T03:03:28.186083+00:00'
+    last_success_at: '2026-02-22T04:07:24.664078+00:00'
     last_error: ''
     level: healthy
     consecutive_failures: 0
     cooldown_until: null
     last_status: ok
-    last_checked_at: '2026-02-22T03:03:28.186083+00:00'
+    last_checked_at: '2026-02-22T04:07:24.664078+00:00'
     retry_attempted: false
     retry_succeeded: false
     retry_count: 0
@@ -302,20 +302,20 @@ sources:
   rss:
     url: https://research.google/blog/rss
     status: confirmed
-    checked_at: '2026-02-22T03:03:28.721326+00:00'
+    checked_at: '2026-02-22T04:07:24.731202+00:00'
     check_method: configured
     candidates: []
   crawl:
     mode: rss_or_html
     max_items: 20
   health:
-    last_success_at: '2026-02-22T03:03:28.721326+00:00'
+    last_success_at: '2026-02-22T04:07:24.731202+00:00'
     last_error: ''
     level: healthy
     consecutive_failures: 0
     cooldown_until: null
     last_status: ok
-    last_checked_at: '2026-02-22T03:03:28.721326+00:00'
+    last_checked_at: '2026-02-22T04:07:24.731202+00:00'
     retry_attempted: false
     retry_succeeded: false
     retry_count: 0
@@ -329,7 +329,7 @@ sources:
   rss:
     url: https://deepmind.google/blog/rss.xml
     status: confirmed
-    checked_at: '2026-02-22T03:03:28.798349+00:00'
+    checked_at: '2026-02-22T04:07:24.764872+00:00'
     check_method: configured
     candidates:
     - https://deepmind.google/blog/rss.xml
@@ -338,13 +338,13 @@ sources:
     mode: rss_or_html
     max_items: 20
   health:
-    last_success_at: '2026-02-22T03:03:28.798349+00:00'
+    last_success_at: '2026-02-22T04:07:24.764872+00:00'
     last_error: ''
     level: healthy
     consecutive_failures: 0
     cooldown_until: null
     last_status: ok
-    last_checked_at: '2026-02-22T03:03:28.798349+00:00'
+    last_checked_at: '2026-02-22T04:07:24.764872+00:00'
     retry_attempted: false
     retry_succeeded: false
     retry_count: 0
@@ -358,7 +358,7 @@ sources:
   rss:
     url: null
     status: unknown
-    checked_at: '2026-02-22T03:03:37.589059+00:00'
+    checked_at: '2026-02-22T04:07:34.531104+00:00'
     check_method: http_probe
     candidates:
     - https://ai.meta.com/blog/rss/
@@ -367,13 +367,13 @@ sources:
     mode: rss_or_html
     max_items: 20
   health:
-    last_success_at: '2026-02-22T03:03:37.589059+00:00'
+    last_success_at: '2026-02-22T04:07:34.531104+00:00'
     last_error: ''
     level: healthy
     consecutive_failures: 0
     cooldown_until: null
     last_status: ok
-    last_checked_at: '2026-02-22T03:03:37.589059+00:00'
+    last_checked_at: '2026-02-22T04:07:34.531104+00:00'
     retry_attempted: false
     retry_succeeded: false
     retry_count: 0
@@ -387,20 +387,20 @@ sources:
   rss:
     url: https://devblogs.microsoft.com/foundry/feed/
     status: confirmed
-    checked_at: '2026-02-22T03:03:29.172682+00:00'
+    checked_at: '2026-02-22T04:07:25.789408+00:00'
     check_method: configured
     candidates: []
   crawl:
     mode: rss_or_html
     max_items: 20
   health:
-    last_success_at: '2026-02-22T03:03:29.172682+00:00'
+    last_success_at: '2026-02-22T04:07:25.789408+00:00'
     last_error: ''
     level: healthy
     consecutive_failures: 0
     cooldown_until: null
     last_status: ok
-    last_checked_at: '2026-02-22T03:03:29.172682+00:00'
+    last_checked_at: '2026-02-22T04:07:25.789408+00:00'
     retry_attempted: false
     retry_succeeded: false
     retry_count: 0
@@ -414,7 +414,7 @@ sources:
   rss:
     url: https://aws.amazon.com/blogs/machine-learning/feed/
     status: confirmed
-    checked_at: '2026-02-22T03:03:29.259214+00:00'
+    checked_at: '2026-02-22T04:07:25.805489+00:00'
     check_method: configured
     candidates:
     - https://aws.amazon.com/blogs/machine-learning/feed/
@@ -423,13 +423,13 @@ sources:
     mode: rss_or_html
     max_items: 20
   health:
-    last_success_at: '2026-02-22T03:03:29.259214+00:00'
+    last_success_at: '2026-02-22T04:07:25.805489+00:00'
     last_error: ''
     level: healthy
     consecutive_failures: 0
     cooldown_until: null
     last_status: ok
-    last_checked_at: '2026-02-22T03:03:29.259214+00:00'
+    last_checked_at: '2026-02-22T04:07:25.805489+00:00'
     retry_attempted: false
     retry_succeeded: false
     retry_count: 0
@@ -443,7 +443,7 @@ sources:
   rss:
     url: null
     status: unknown
-    checked_at: '2026-02-22T03:03:38.879538+00:00'
+    checked_at: '2026-02-22T04:07:36.522373+00:00'
     check_method: http_probe
     candidates:
     - https://mistral.ai/news/rss.xml
@@ -452,13 +452,13 @@ sources:
     mode: rss_or_html
     max_items: 20
   health:
-    last_success_at: '2026-02-22T03:03:38.879538+00:00'
+    last_success_at: '2026-02-22T04:07:36.522373+00:00'
     last_error: ''
     level: healthy
     consecutive_failures: 0
     cooldown_until: null
     last_status: ok
-    last_checked_at: '2026-02-22T03:03:38.879538+00:00'
+    last_checked_at: '2026-02-22T04:07:36.522373+00:00'
     retry_attempted: false
     retry_succeeded: false
     retry_count: 0
@@ -472,7 +472,7 @@ sources:
   rss:
     url: null
     status: unknown
-    checked_at: '2026-02-22T03:03:36.732475+00:00'
+    checked_at: '2026-02-22T04:07:33.788822+00:00'
     check_method: http_probe
     candidates:
     - https://cohere.com/blog/rss.xml
@@ -481,13 +481,13 @@ sources:
     mode: rss_or_html
     max_items: 20
   health:
-    last_success_at: '2026-02-22T03:03:36.732475+00:00'
+    last_success_at: '2026-02-22T04:07:33.788822+00:00'
     last_error: ''
     level: healthy
     consecutive_failures: 0
     cooldown_until: null
-    last_status: empty
-    last_checked_at: '2026-02-22T03:03:36.732475+00:00'
+    last_status: ok
+    last_checked_at: '2026-02-22T04:07:33.788822+00:00'
     retry_attempted: false
     retry_succeeded: false
     retry_count: 0
@@ -501,7 +501,7 @@ sources:
   rss:
     url: null
     status: unknown
-    checked_at: '2026-02-22T03:03:32.854795+00:00'
+    checked_at: '2026-02-22T04:07:28.722841+00:00'
     check_method: http_probe
     candidates:
     - https://www.llamaindex.ai/blog/rss.xml
@@ -510,13 +510,13 @@ sources:
     mode: rss_or_html
     max_items: 20
   health:
-    last_success_at: '2026-02-22T03:03:32.854795+00:00'
+    last_success_at: '2026-02-22T04:07:28.722841+00:00'
     last_error: ''
     level: healthy
     consecutive_failures: 0
     cooldown_until: null
     last_status: ok
-    last_checked_at: '2026-02-22T03:03:32.854795+00:00'
+    last_checked_at: '2026-02-22T04:07:28.722841+00:00'
     retry_attempted: false
     retry_succeeded: false
     retry_count: 0
@@ -530,7 +530,7 @@ sources:
   rss:
     url: null
     status: unknown
-    checked_at: '2026-02-22T03:03:32.411607+00:00'
+    checked_at: '2026-02-22T04:07:29.695165+00:00'
     check_method: http_probe
     candidates:
     - https://www.crewai.com/blog/rss.xml
@@ -539,13 +539,13 @@ sources:
     mode: rss_or_html
     max_items: 20
   health:
-    last_success_at: '2026-02-22T03:03:32.411607+00:00'
+    last_success_at: '2026-02-22T04:07:29.695165+00:00'
     last_error: ''
     level: healthy
     consecutive_failures: 0
     cooldown_until: null
     last_status: ok
-    last_checked_at: '2026-02-22T03:03:32.411607+00:00'
+    last_checked_at: '2026-02-22T04:07:29.695165+00:00'
     retry_attempted: false
     retry_succeeded: false
     retry_count: 0
