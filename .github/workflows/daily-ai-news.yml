@@ -31,7 +31,7 @@ jobs:
         uses: openai/codex-action@v1
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
-          responses-api-endpoint: ${{ secrets.OPENAI_BASE_URL }}
+          responses-api-endpoint: ${{ secrets.OPENAI_RESPONSES_API_ENDPOINT != '' && secrets.OPENAI_RESPONSES_API_ENDPOINT || secrets.OPENAI_BASE_URL }}
           codex-version: 0.104.0
           sandbox: danger-full-access
           prompt: |
@@ -44,7 +44,7 @@ jobs:
             - 不要修改 workflow、README、requirements 或脚本代码。
             最后输出一行摘要：pipeline done。
         env:
-          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL != '' && secrets.OPENAI_BASE_URL || secrets.OPENAI_RESPONSES_API_ENDPOINT }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
           WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}

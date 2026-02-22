@@ -34,7 +34,8 @@ OPENAI_BASE_URL=https://api.openai.com/v1 OPENAI_API_KEY=your_key OPENAI_MODEL=g
 
 ## 环境变量 / Secrets
 
-- `OPENAI_BASE_URL`：可选，默认 `https://api.openai.com/v1`
+- `OPENAI_RESPONSES_API_ENDPOINT`：可选，供 `openai/codex-action` 使用，推荐填完整 endpoint（如 `https://api.openai.com/v1/responses`）
+- `OPENAI_BASE_URL`：可选，供 Python 脚本使用，支持 `.../v1` 或 `.../v1/responses`，默认 `https://api.openai.com/v1`
 - `OPENAI_API_KEY`：必需（Codex Action 鉴权；脚本模型分析也依赖）
 - `OPENAI_MODEL`：可选，默认 `gpt-4.1-mini`（兼容旧变量 `AI_MODEL`）
 - `WEBHOOK_URL`：可选，允许为空，配置后推送每日结果
@@ -43,7 +44,7 @@ OPENAI_BASE_URL=https://api.openai.com/v1 OPENAI_API_KEY=your_key OPENAI_MODEL=g
 ## GitHub Actions Secret 建议
 
 - 必需：`OPENAI_API_KEY`
-- 可选：`OPENAI_BASE_URL`、`OPENAI_MODEL`、`WEBHOOK_URL`、`WEBHOOK_SECRET`
+- 可选：`OPENAI_RESPONSES_API_ENDPOINT`、`OPENAI_BASE_URL`、`OPENAI_MODEL`、`WEBHOOK_URL`、`WEBHOOK_SECRET`
 
 ## 工作流执行说明
 
