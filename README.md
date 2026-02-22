@@ -29,20 +29,21 @@ npm install -g @openai/codex@0.104.0
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-OPENAI_API_KEY=your_key codex exec --sandbox danger-full-access --skip-git-repo-check "依次运行 python scripts/rss_audit.py --sources config/sources.yaml --out data/rss-audit-latest.json --update 和 python scripts/pipeline.py --sources config/sources.yaml --update-sources --use-codex，失败即退出。"
+OPENAI_BASE_URL=https://api.openai.com/v1 OPENAI_API_KEY=your_key OPENAI_MODEL=gpt-4.1-mini codex exec --sandbox danger-full-access --skip-git-repo-check "依次运行 python scripts/rss_audit.py --sources config/sources.yaml --out data/rss-audit-latest.json --update 和 python scripts/pipeline.py --sources config/sources.yaml --update-sources --use-codex，失败即退出。"
 ```
 
 ## 环境变量 / Secrets
 
+- `OPENAI_BASE_URL`：可选，默认 `https://api.openai.com/v1`
 - `OPENAI_API_KEY`：必需（Codex Action 鉴权；脚本模型分析也依赖）
-- `AI_MODEL`：可选，默认 `gpt-4.1-mini`
-- `WEBHOOK_URL`：可选，配置后推送每日结果
+- `OPENAI_MODEL`：可选，默认 `gpt-4.1-mini`（兼容旧变量 `AI_MODEL`）
+- `WEBHOOK_URL`：可选，允许为空，配置后推送每日结果
 - `WEBHOOK_SECRET`：可选，配置后启用 HMAC-SHA256 签名
 
 ## GitHub Actions Secret 建议
 
 - 必需：`OPENAI_API_KEY`
-- 可选：`AI_MODEL`、`WEBHOOK_URL`、`WEBHOOK_SECRET`
+- 可选：`OPENAI_BASE_URL`、`OPENAI_MODEL`、`WEBHOOK_URL`、`WEBHOOK_SECRET`
 
 ## 工作流执行说明
 

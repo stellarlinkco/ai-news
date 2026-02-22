@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
 from datetime import datetime, timezone
 from typing import Any
@@ -137,6 +138,29 @@ def build_http_client() -> httpx.Client:
         follow_redirects=True,
         headers={"User-Agent": USER_AGENT, "Accept": "*/*"},
     )
+
+
+def resolve_openai_model(default: str = "gpt-4.1-mini") -> str:
+    return (
+        os.getenv("OPENAI_MODEL", "").strip()
+        or os.getenv("AI_MODEL", "").strip()
+        or default
+    )
+
+
+def openai_responses_endpoint(base_url: str = "") -> str:
+    configured = (base_url or "").strip() or os.getenv("OPENAI_BASE_URL", "").strip()
+    if not configured:
+        return "https://api.openai.com/v1/responses"
+    normalized = configured.rstrip("/")
+    if normalized.endswith("/responses"):
+        return normalized
+    if normalized.endswith("/v1"):
+        return f"{normalized}/responses"
+    parsed = urlparse(normalized)
+    if not parsed.path:
+        return f"{normalized}/v1/responses"
+    return f"{normalized}/responses"
 
 
 def is_feed_content(content_type: str, body: str) -> bool:
@@ -668,6 +692,7 @@ def analyze_item_with_openai(
     title: str,
     summary: str,
     source_name: str,
+    base_url: str = "",
 ) -> dict[str, Any]:
     system_prompt = (
         "You are an AI news triage engine. "
@@ -688,7 +713,7 @@ def analyze_item_with_openai(
         "temperature": 0.1,
     }
     response = client.post(
-        "https://api.openai.com/v1/responses",
+        openai_responses_endpoint(base_url),
         headers={"Authorization": f"Bearer {api_key}"},
         json=payload,
     )
@@ -717,6 +742,7 @@ def analyze_with_codex(
     summary: str,
     source_name: str,
     full_content: str = "",
+    base_url: str = "",
 ) -> dict[str, Any]:
     """使用 Codex API 进行深度内容分析。
 
@@ -760,7 +786,7 @@ def analyze_with_codex(
             "temperature": 0.2,
         }
         response = client.post(
-            "https://api.openai.com/v1/responses",
+            openai_responses_endpoint(base_url),
             headers={"Authorization": f"Bearer {api_key}"},
             json=payload,
         )

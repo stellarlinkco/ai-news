@@ -15,7 +15,7 @@ SCRIPTS_DIR = ROOT_DIR / "scripts"
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
-from pipeline_lib import build_http_client
+from pipeline_lib import build_http_client, openai_responses_endpoint, resolve_openai_model
 
 
 def write_json(path: str, payload: dict[str, Any]) -> None:
@@ -188,7 +188,8 @@ def generate_ai_summary(run_payload: dict[str, Any]) -> str | None:
     api_key = os.getenv("OPENAI_API_KEY", "").strip()
     if not api_key:
         return None
-    model = os.getenv("AI_MODEL", "gpt-4.1-mini").strip()
+    model = resolve_openai_model()
+    base_url = os.getenv("OPENAI_BASE_URL", "").strip()
     items = list(run_payload.get("items", []))[:30]
     system_prompt = (
         "你是 AI 资讯编辑。请输出中文 Markdown，长度 300-500 字，结构包含："
@@ -215,7 +216,7 @@ def generate_ai_summary(run_payload: dict[str, Any]) -> str | None:
     try:
         with build_http_client() as client:
             response = client.post(
-                "https://api.openai.com/v1/responses",
+                openai_responses_endpoint(base_url),
                 headers={"Authorization": f"Bearer {api_key}"},
                 json=payload,
             )

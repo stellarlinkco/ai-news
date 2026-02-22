@@ -43,8 +43,9 @@ jobs:
             - 不要修改 workflow、README、requirements 或脚本代码。
             最后输出一行摘要：pipeline done。
         env:
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          AI_MODEL: ${{ secrets.AI_MODEL }}
+          OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
           WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
           WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }}
 

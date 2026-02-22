@@ -22,6 +22,7 @@ from pipeline_lib import (
     estimate_relevance,
     estimate_reading_time,
     now_iso,
+    resolve_openai_model,
 )
 
 
@@ -103,6 +104,7 @@ def analyze_item(
     source_name: str,
     api_key: str,
     model: str,
+    base_url: str,
     use_codex: bool = False,
 ) -> dict[str, Any]:
     if not api_key:
@@ -117,6 +119,7 @@ def analyze_item(
                 summary=item.get("summary", ""),
                 source_name=source_name,
                 full_content=item.get("full_content", ""),
+                base_url=base_url,
             )
         else:
             analysis = analyze_item_with_openai(
@@ -126,6 +129,7 @@ def analyze_item(
                 title=item["title"],
                 summary=item.get("summary", ""),
                 source_name=source_name,
+                base_url=base_url,
             )
         return normalize_analysis(item, analysis)
     except Exception:
@@ -137,12 +141,13 @@ def analyze_items(
     items: list[dict[str, Any]],
     api_key: str,
     model: str,
+    base_url: str,
     use_codex: bool = False,
 ) -> list[dict[str, Any]]:
     analyzed: list[dict[str, Any]] = []
     for item in items:
         source_name = str(item.get("source_name") or item.get("source") or "unknown")
-        analysis = analyze_item(client, item, source_name, api_key, model, use_codex)
+        analysis = analyze_item(client, item, source_name, api_key, model, base_url, use_codex)
         merged = dict(item)
         merged["relevance"] = int(analysis.get("relevance", 0))
         merged["tags"] = analysis.get("tags", [])
@@ -182,7 +187,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--input", default="data/crawl-latest.json")
     parser.add_argument("--output", default="data/analyze-latest.json")
     parser.add_argument("--api-key", default=os.getenv("OPENAI_API_KEY", "").strip())
-    parser.add_argument("--model", default=os.getenv("AI_MODEL", "gpt-4.1-mini").strip())
+    parser.add_argument("--model", default=resolve_openai_model())
+    parser.add_argument("--base-url", default=os.getenv("OPENAI_BASE_URL", "").strip())
     parser.add_argument("--use-codex", action="store_true")
     return parser.parse_args()
 
@@ -191,7 +197,7 @@ def main() -> None:
     args = parse_args()
     items = load_items(args.input)
     with build_http_client() as client:
-        analyzed = analyze_items(client, items, args.api_key, args.model, args.use_codex)
+        analyzed = analyze_items(client, items, args.api_key, args.model, args.base_url, args.use_codex)
     payload = {
         "generated_at": now_iso(),
         "items_count": len(analyzed),

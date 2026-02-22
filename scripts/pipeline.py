@@ -16,7 +16,14 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
-from pipeline_lib import build_http_client, load_sources, now_iso, save_sources, stable_item_uid
+from pipeline_lib import (
+    build_http_client,
+    load_sources,
+    now_iso,
+    resolve_openai_model,
+    save_sources,
+    stable_item_uid,
+)
 from skills.analyze_ai_news import analyze_item
 from skills.crawl_ai_news import apply_source_rss_update, collect_source_items
 from skills.generate_daily_summary import publish_run_payload, send_webhook
@@ -402,7 +409,8 @@ def main() -> None:
     today = datetime.now(timezone.utc).date().isoformat()
     collected_at = now_iso()
     api_key = os.getenv("OPENAI_API_KEY", "").strip()
-    model = os.getenv("AI_MODEL", "gpt-4.1-mini").strip()
+    model = resolve_openai_model()
+    base_url = os.getenv("OPENAI_BASE_URL", "").strip()
 
     run_items: list[dict[str, Any]] = []
     new_items: list[dict[str, Any]] = []
@@ -431,6 +439,7 @@ def main() -> None:
                     source_name=source["name"],
                     api_key=api_key,
                     model=model,
+                    base_url=base_url,
                     use_codex=args.use_codex,
                 )
                 row = {
