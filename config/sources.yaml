@@ -1,0 +1,551 @@
+version: 1
+generated_at: 2026-02-21
+sources:
+- id: openai-news-engineering
+  name: OpenAI News (Engineering)
+  homepage: https://openai.com/news/engineering/
+  category: model_company
+  focus:
+  - engineering
+  - product
+  rss:
+    url: https://openai.com/news/rss.xml
+    status: confirmed
+    checked_at: '2026-02-22T03:03:28.180986+00:00'
+    check_method: configured
+    candidates: []
+  crawl:
+    mode: rss_or_html
+    max_items: 20
+  health:
+    last_success_at: '2026-02-22T03:03:28.180986+00:00'
+    last_error: ''
+    level: healthy
+    consecutive_failures: 0
+    cooldown_until: null
+    last_status: ok
+    last_checked_at: '2026-02-22T03:03:28.180986+00:00'
+    retry_attempted: false
+    retry_succeeded: false
+    retry_count: 0
+- id: openai-developers-blog
+  name: OpenAI Developers Blog
+  homepage: https://developers.openai.com/blog/
+  category: model_company
+  focus:
+  - developer
+  - api
+  rss:
+    url: https://developers.openai.com/rss.xml
+    status: confirmed
+    checked_at: '2026-02-22T03:03:28.179176+00:00'
+    check_method: configured
+    candidates:
+    - https://developers.openai.com/blog/rss.xml
+    - https://developers.openai.com/blog/feed.xml
+    - https://developers.openai.com/rss.xml
+  crawl:
+    mode: rss_or_html
+    max_items: 20
+  health:
+    last_success_at: '2026-02-22T03:03:28.179176+00:00'
+    last_error: ''
+    level: healthy
+    consecutive_failures: 0
+    cooldown_until: null
+    last_status: ok
+    last_checked_at: '2026-02-22T03:03:28.179176+00:00'
+    retry_attempted: false
+    retry_succeeded: false
+    retry_count: 0
+- id: anthropic-engineering
+  name: Anthropic Engineering
+  homepage: https://www.anthropic.com/engineering
+  category: model_company
+  focus:
+  - engineering
+  - safety
+  rss:
+    url: null
+    status: unknown
+    checked_at: '2026-02-22T03:03:57.500575+00:00'
+    check_method: http_probe
+    candidates:
+    - https://www.anthropic.com/engineering/rss.xml
+    - https://www.anthropic.com/rss.xml
+    - https://www.anthropic.com/news/rss.xml
+  crawl:
+    mode: rss_or_html
+    max_items: 20
+  health:
+    last_success_at: '2026-02-22T03:03:57.500575+00:00'
+    last_error: ''
+    level: healthy
+    consecutive_failures: 0
+    cooldown_until: null
+    last_status: ok
+    last_checked_at: '2026-02-22T03:03:57.500575+00:00'
+    retry_attempted: false
+    retry_succeeded: false
+    retry_count: 0
+- id: claude-blog
+  name: Claude Blog
+  homepage: https://claude.com/blog
+  category: model_company
+  focus:
+  - product
+  - engineering
+  rss:
+    url: null
+    status: unknown
+    checked_at: '2026-02-22T03:03:30.740867+00:00'
+    check_method: http_probe
+    candidates:
+    - https://claude.com/blog/rss.xml
+    - https://claude.com/rss.xml
+  crawl:
+    mode: rss_or_html
+    max_items: 20
+  health:
+    last_success_at: '2026-02-22T03:03:30.740867+00:00'
+    last_error: ''
+    level: healthy
+    consecutive_failures: 0
+    cooldown_until: null
+    last_status: ok
+    last_checked_at: '2026-02-22T03:03:30.740867+00:00'
+    retry_attempted: false
+    retry_succeeded: false
+    retry_count: 0
+- id: manus-blog
+  name: Manus Blog
+  homepage: https://manus.im/blog
+  category: ai_company
+  focus:
+  - agent
+  - product
+  rss:
+    url: null
+    status: unknown
+    checked_at: '2026-02-22T03:03:35.982475+00:00'
+    check_method: http_probe
+    candidates:
+    - https://manus.im/blog/rss.xml
+    - https://manus.im/rss.xml
+  crawl:
+    mode: rss_or_html
+    max_items: 20
+  health:
+    last_success_at: '2026-02-22T03:03:35.982475+00:00'
+    last_error: ''
+    level: healthy
+    consecutive_failures: 0
+    cooldown_until: null
+    last_status: ok
+    last_checked_at: '2026-02-22T03:03:35.982475+00:00'
+    retry_attempted: false
+    retry_succeeded: false
+    retry_count: 0
+- id: langchain-blog
+  name: LangChain Blog
+  homepage: https://blog.langchain.com/
+  category: agent_framework
+  focus:
+  - agent
+  - framework
+  - engineering
+  rss:
+    url: https://blog.langchain.com/rss/
+    status: confirmed
+    checked_at: '2026-02-22T03:03:28.189887+00:00'
+    check_method: configured
+    candidates:
+    - https://blog.langchain.com/rss/
+    - https://blog.langchain.com/rss.xml
+    - https://blog.langchain.com/feed.xml
+  crawl:
+    mode: rss_or_html
+    max_items: 20
+  health:
+    last_success_at: '2026-02-22T03:03:28.189887+00:00'
+    last_error: ''
+    level: healthy
+    consecutive_failures: 0
+    cooldown_until: null
+    last_status: ok
+    last_checked_at: '2026-02-22T03:03:28.189887+00:00'
+    retry_attempted: false
+    retry_succeeded: false
+    retry_count: 0
+- id: huggingface-blog
+  name: Hugging Face Blog
+  homepage: https://huggingface.co/blog/
+  category: model_company
+  focus:
+  - open_source
+  - ml
+  rss:
+    url: https://huggingface.co/blog/feed.xml
+    status: confirmed
+    checked_at: '2026-02-22T03:03:28.182267+00:00'
+    check_method: configured
+    candidates:
+    - https://huggingface.co/blog/feed.xml
+    - https://huggingface.co/blog/rss.xml
+  crawl:
+    mode: rss_or_html
+    max_items: 20
+  health:
+    last_success_at: '2026-02-22T03:03:28.182267+00:00'
+    last_error: ''
+    level: healthy
+    consecutive_failures: 0
+    cooldown_until: null
+    last_status: ok
+    last_checked_at: '2026-02-22T03:03:28.182267+00:00'
+    retry_attempted: false
+    retry_succeeded: false
+    retry_count: 0
+- id: github-blog
+  name: GitHub Blog
+  homepage: https://github.blog/
+  category: platform
+  focus:
+  - engineering
+  - ai
+  rss:
+    url: https://github.blog/feed/
+    status: confirmed
+    checked_at: '2026-02-22T03:03:28.189286+00:00'
+    check_method: configured
+    candidates:
+    - https://github.blog/feed/
+    - https://github.blog/all.atom
+  crawl:
+    mode: rss_or_html
+    max_items: 20
+  health:
+    last_success_at: '2026-02-22T03:03:28.189286+00:00'
+    last_error: ''
+    level: healthy
+    consecutive_failures: 0
+    cooldown_until: null
+    last_status: ok
+    last_checked_at: '2026-02-22T03:03:28.189286+00:00'
+    retry_attempted: false
+    retry_succeeded: false
+    retry_count: 0
+- id: cloudflare-blog
+  name: Cloudflare Blog
+  homepage: https://blog.cloudflare.com/
+  category: infra
+  focus:
+  - engineering
+  - ai
+  rss:
+    url: https://blog.cloudflare.com/rss/
+    status: confirmed
+    checked_at: '2026-02-22T03:03:28.189588+00:00'
+    check_method: configured
+    candidates:
+    - https://blog.cloudflare.com/rss/
+  crawl:
+    mode: rss_or_html
+    max_items: 20
+  health:
+    last_success_at: '2026-02-22T03:03:28.189588+00:00'
+    last_error: ''
+    level: healthy
+    consecutive_failures: 0
+    cooldown_until: null
+    last_status: ok
+    last_checked_at: '2026-02-22T03:03:28.189588+00:00'
+    retry_attempted: false
+    retry_succeeded: false
+    retry_count: 0
+- id: vercel-blog
+  name: Vercel Blog
+  homepage: https://vercel.com/blog
+  category: platform
+  focus:
+  - engineering
+  - ai
+  rss:
+    url: https://vercel.com/atom
+    status: confirmed
+    checked_at: '2026-02-22T03:03:28.186083+00:00'
+    check_method: configured
+    candidates:
+    - https://vercel.com/atom
+    - https://vercel.com/blog/rss.xml
+  crawl:
+    mode: rss_or_html
+    max_items: 20
+  health:
+    last_success_at: '2026-02-22T03:03:28.186083+00:00'
+    last_error: ''
+    level: healthy
+    consecutive_failures: 0
+    cooldown_until: null
+    last_status: ok
+    last_checked_at: '2026-02-22T03:03:28.186083+00:00'
+    retry_attempted: false
+    retry_succeeded: false
+    retry_count: 0
+- id: google-research-blog
+  name: Google Research Blog
+  homepage: https://research.google/blog/
+  category: research_org
+  focus:
+  - research
+  - ai
+  rss:
+    url: https://research.google/blog/rss
+    status: confirmed
+    checked_at: '2026-02-22T03:03:28.721326+00:00'
+    check_method: configured
+    candidates: []
+  crawl:
+    mode: rss_or_html
+    max_items: 20
+  health:
+    last_success_at: '2026-02-22T03:03:28.721326+00:00'
+    last_error: ''
+    level: healthy
+    consecutive_failures: 0
+    cooldown_until: null
+    last_status: ok
+    last_checked_at: '2026-02-22T03:03:28.721326+00:00'
+    retry_attempted: false
+    retry_succeeded: false
+    retry_count: 0
+- id: deepmind-blog
+  name: Google DeepMind Blog
+  homepage: https://deepmind.google/discover/blog/
+  category: model_company
+  focus:
+  - research
+  - ai
+  rss:
+    url: https://deepmind.google/blog/rss.xml
+    status: confirmed
+    checked_at: '2026-02-22T03:03:28.798349+00:00'
+    check_method: configured
+    candidates:
+    - https://deepmind.google/blog/rss.xml
+    - https://deepmind.google/discover/blog/rss.xml
+  crawl:
+    mode: rss_or_html
+    max_items: 20
+  health:
+    last_success_at: '2026-02-22T03:03:28.798349+00:00'
+    last_error: ''
+    level: healthy
+    consecutive_failures: 0
+    cooldown_until: null
+    last_status: ok
+    last_checked_at: '2026-02-22T03:03:28.798349+00:00'
+    retry_attempted: false
+    retry_succeeded: false
+    retry_count: 0
+- id: meta-ai-blog
+  name: Meta AI Blog
+  homepage: https://ai.meta.com/blog/
+  category: model_company
+  focus:
+  - research
+  - ai
+  rss:
+    url: null
+    status: unknown
+    checked_at: '2026-02-22T03:03:37.589059+00:00'
+    check_method: http_probe
+    candidates:
+    - https://ai.meta.com/blog/rss/
+    - https://ai.meta.com/blog/feed/
+  crawl:
+    mode: rss_or_html
+    max_items: 20
+  health:
+    last_success_at: '2026-02-22T03:03:37.589059+00:00'
+    last_error: ''
+    level: healthy
+    consecutive_failures: 0
+    cooldown_until: null
+    last_status: ok
+    last_checked_at: '2026-02-22T03:03:37.589059+00:00'
+    retry_attempted: false
+    retry_succeeded: false
+    retry_count: 0
+- id: microsoft-foundry-blog
+  name: Microsoft Foundry Blog
+  homepage: https://devblogs.microsoft.com/foundry/
+  category: platform
+  focus:
+  - agent
+  - enterprise
+  rss:
+    url: https://devblogs.microsoft.com/foundry/feed/
+    status: confirmed
+    checked_at: '2026-02-22T03:03:29.172682+00:00'
+    check_method: configured
+    candidates: []
+  crawl:
+    mode: rss_or_html
+    max_items: 20
+  health:
+    last_success_at: '2026-02-22T03:03:29.172682+00:00'
+    last_error: ''
+    level: healthy
+    consecutive_failures: 0
+    cooldown_until: null
+    last_status: ok
+    last_checked_at: '2026-02-22T03:03:29.172682+00:00'
+    retry_attempted: false
+    retry_succeeded: false
+    retry_count: 0
+- id: aws-ml-blog
+  name: AWS Machine Learning Blog
+  homepage: https://aws.amazon.com/blogs/machine-learning/
+  category: cloud_platform
+  focus:
+  - engineering
+  - ai
+  rss:
+    url: https://aws.amazon.com/blogs/machine-learning/feed/
+    status: confirmed
+    checked_at: '2026-02-22T03:03:29.259214+00:00'
+    check_method: configured
+    candidates:
+    - https://aws.amazon.com/blogs/machine-learning/feed/
+    - https://aws.amazon.com/blogs/machine-learning/rss/
+  crawl:
+    mode: rss_or_html
+    max_items: 20
+  health:
+    last_success_at: '2026-02-22T03:03:29.259214+00:00'
+    last_error: ''
+    level: healthy
+    consecutive_failures: 0
+    cooldown_until: null
+    last_status: ok
+    last_checked_at: '2026-02-22T03:03:29.259214+00:00'
+    retry_attempted: false
+    retry_succeeded: false
+    retry_count: 0
+- id: mistral-news
+  name: Mistral News
+  homepage: https://mistral.ai/news
+  category: model_company
+  focus:
+  - product
+  - engineering
+  rss:
+    url: null
+    status: unknown
+    checked_at: '2026-02-22T03:03:38.879538+00:00'
+    check_method: http_probe
+    candidates:
+    - https://mistral.ai/news/rss.xml
+    - https://mistral.ai/rss.xml
+  crawl:
+    mode: rss_or_html
+    max_items: 20
+  health:
+    last_success_at: '2026-02-22T03:03:38.879538+00:00'
+    last_error: ''
+    level: healthy
+    consecutive_failures: 0
+    cooldown_until: null
+    last_status: ok
+    last_checked_at: '2026-02-22T03:03:38.879538+00:00'
+    retry_attempted: false
+    retry_succeeded: false
+    retry_count: 0
+- id: cohere-blog
+  name: Cohere Blog
+  homepage: https://cohere.com/blog
+  category: model_company
+  focus:
+  - enterprise
+  - llm
+  rss:
+    url: null
+    status: unknown
+    checked_at: '2026-02-22T03:03:36.732475+00:00'
+    check_method: http_probe
+    candidates:
+    - https://cohere.com/blog/rss.xml
+    - https://cohere.com/blog/feed.xml
+  crawl:
+    mode: rss_or_html
+    max_items: 20
+  health:
+    last_success_at: '2026-02-22T03:03:36.732475+00:00'
+    last_error: ''
+    level: healthy
+    consecutive_failures: 0
+    cooldown_until: null
+    last_status: empty
+    last_checked_at: '2026-02-22T03:03:36.732475+00:00'
+    retry_attempted: false
+    retry_succeeded: false
+    retry_count: 0
+- id: llamaindex-blog
+  name: LlamaIndex Blog
+  homepage: https://www.llamaindex.ai/blog
+  category: agent_framework
+  focus:
+  - rag
+  - agent
+  rss:
+    url: null
+    status: unknown
+    checked_at: '2026-02-22T03:03:32.854795+00:00'
+    check_method: http_probe
+    candidates:
+    - https://www.llamaindex.ai/blog/rss.xml
+    - https://www.llamaindex.ai/rss.xml
+  crawl:
+    mode: rss_or_html
+    max_items: 20
+  health:
+    last_success_at: '2026-02-22T03:03:32.854795+00:00'
+    last_error: ''
+    level: healthy
+    consecutive_failures: 0
+    cooldown_until: null
+    last_status: ok
+    last_checked_at: '2026-02-22T03:03:32.854795+00:00'
+    retry_attempted: false
+    retry_succeeded: false
+    retry_count: 0
+- id: crewai-blog
+  name: CrewAI Blog
+  homepage: https://www.crewai.com/blog
+  category: agent_framework
+  focus:
+  - agent
+  - framework
+  rss:
+    url: null
+    status: unknown
+    checked_at: '2026-02-22T03:03:32.411607+00:00'
+    check_method: http_probe
+    candidates:
+    - https://www.crewai.com/blog/rss.xml
+    - https://www.crewai.com/rss.xml
+  crawl:
+    mode: rss_or_html
+    max_items: 20
+  health:
+    last_success_at: '2026-02-22T03:03:32.411607+00:00'
+    last_error: ''
+    level: healthy
+    consecutive_failures: 0
+    cooldown_until: null
+    last_status: ok
+    last_checked_at: '2026-02-22T03:03:32.411607+00:00'
+    retry_attempted: false
+    retry_succeeded: false
+    retry_count: 0

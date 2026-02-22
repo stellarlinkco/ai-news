@@ -1,0 +1,407 @@
+{
+  "generated_at": "2026-02-22T02:51:39.272137+00:00",
+  "sources_checked": 2,
+  "new_items_count": 40,
+  "items": [
+    {
+      "source_id": "openai-news-engineering",
+      "source_name": "OpenAI News (Engineering)",
+      "title": "Our First Proof submissions",
+      "url": "https://openai.com/index/first-proof-submissions",
+      "summary": "We share our AI model’s proof attempts for the First Proof math challenge, testing research-grade reasoning on expert-level problems.",
+      "published_at": "Fri, 20 Feb 2026 14:30:00 GMT",
+      "source_via": "rss"
+    },
+    {
+      "source_id": "openai-news-engineering",
+      "source_name": "OpenAI News (Engineering)",
+      "title": "Advancing independent research on AI alignment",
+      "url": "https://openai.com/index/advancing-independent-research-ai-alignment",
+      "summary": "OpenAI commits $7.5M to The Alignment Project to fund independent AI alignment research, strengthening global efforts to address AGI safety and security risks.",
+      "published_at": "Thu, 19 Feb 2026 10:00:00 GMT",
+      "source_via": "rss"
+    },
+    {
+      "source_id": "openai-news-engineering",
+      "source_name": "OpenAI News (Engineering)",
+      "title": "Introducing OpenAI for India",
+      "url": "https://openai.com/index/openai-for-india",
+      "summary": "OpenAI for India expands AI access across the country—building local infrastructure, powering enterprises, and advancing workforce skills.",
+      "published_at": "Wed, 18 Feb 2026 21:00:00 GMT",
+      "source_via": "rss"
+    },
+    {
+      "source_id": "openai-news-engineering",
+      "source_name": "OpenAI News (Engineering)",
+      "title": "GPT-5.2 derives a new result in theoretical physics",
+      "url": "https://openai.com/index/new-result-theoretical-physics",
+      "summary": "A new preprint shows GPT-5.2 proposing a new formula for a gluon amplitude, later formally proved and verified by OpenAI and academic collaborators.",
+      "published_at": "Fri, 13 Feb 2026 11:00:00 GMT",
+      "source_via": "rss"
+    },
+    {
+      "source_id": "openai-news-engineering",
+      "source_name": "OpenAI News (Engineering)",
+      "title": "Introducing Lockdown Mode and Elevated Risk labels in ChatGPT",
+      "url": "https://openai.com/index/introducing-lockdown-mode-and-elevated-risk-labels-in-chatgpt",
+      "summary": "Introducing Lockdown Mode and Elevated Risk labels in ChatGPT to help organizations defend against prompt injection and AI-driven data exfiltration.",
+      "published_at": "Fri, 13 Feb 2026 10:00:00 GMT",
+      "source_via": "rss"
+    },
+    {
+      "source_id": "openai-news-engineering",
+      "source_name": "OpenAI News (Engineering)",
+      "title": "Scaling social science research",
+      "url": "https://openai.com/index/scaling-social-science-research",
+      "summary": "GABRIEL is a new open-source toolkit from OpenAI that uses GPT to turn qualitative text and images into quantitative data, helping social scientists analyze research at scale.",
+      "published_at": "Fri, 13 Feb 2026 09:00:00 GMT",
+      "source_via": "rss"
+    },
+    {
+      "source_id": "openai-news-engineering",
+      "source_name": "OpenAI News (Engineering)",
+      "title": "Beyond rate limits: scaling access to Codex and Sora",
+      "url": "https://openai.com/index/beyond-rate-limits",
+      "summary": "How OpenAI built a real-time access system combining rate limits, usage tracking, and credits to power continuous access to Sora and Codex.",
+      "published_at": "Fri, 13 Feb 2026 09:00:00 GMT",
+      "source_via": "rss"
+    },
+    {
+      "source_id": "openai-news-engineering",
+      "source_name": "OpenAI News (Engineering)",
+      "title": "Introducing GPT-5.3-Codex-Spark",
+      "url": "https://openai.com/index/introducing-gpt-5-3-codex-spark",
+      "summary": "Introducing GPT-5.3-Codex-Spark—our first real-time coding model. 15x faster generation, 128k context, now in research preview for ChatGPT Pro users.",
+      "published_at": "Thu, 12 Feb 2026 10:00:00 GMT",
+      "source_via": "rss"
+    },
+    {
+      "source_id": "openai-news-engineering",
+      "source_name": "OpenAI News (Engineering)",
+      "title": "Harness engineering: leveraging Codex in an agent-first world",
+      "url": "https://openai.com/index/harness-engineering",
+      "summary": "By Ryan Lopopolo, Member of the Technical Staff",
+      "published_at": "Wed, 11 Feb 2026 09:00:00 GMT",
+      "source_via": "rss"
+    },
+    {
+      "source_id": "openai-news-engineering",
+      "source_name": "OpenAI News (Engineering)",
+      "title": "Bringing ChatGPT to GenAI.mil",
+      "url": "https://openai.com/index/bringing-chatgpt-to-genaimil",
+      "summary": "OpenAI for Government announces the deployment of a custom ChatGPT on GenAI.mil, bringing secure, safety-forward AI to U.S. defense teams.",
+      "published_at": "Mon, 09 Feb 2026 11:00:00 GMT",
+      "source_via": "rss"
+    },
+    {
+      "source_id": "openai-news-engineering",
+      "source_name": "OpenAI News (Engineering)",
+      "title": "Testing ads in ChatGPT",
+      "url": "https://openai.com/index/testing-ads-in-chatgpt",
+      "summary": "OpenAI begins testing ads in ChatGPT to support free access, with clear labeling, answer independence, strong privacy protections, and user control.",
+      "published_at": "Mon, 09 Feb 2026 11:00:00 GMT",
+      "source_via": "rss"
+    },
+    {
+      "source_id": "openai-news-engineering",
+      "source_name": "OpenAI News (Engineering)",
+      "title": "Making AI work for everyone, everywhere: our approach to localization",
+      "url": "https://openai.com/index/our-approach-to-localization",
+      "summary": "OpenAI shares its approach to AI localization, showing how globally shared frontier models can be adapted to local languages, laws, and cultures without compromising safety.",
+      "published_at": "Fri, 06 Feb 2026 10:00:00 GMT",
+      "source_via": "rss"
+    },
+    {
+      "source_id": "openai-news-engineering",
+      "source_name": "OpenAI News (Engineering)",
+      "title": "GPT-5 lowers the cost of cell-free protein synthesis",
+      "url": "https://openai.com/index/gpt-5-lowers-protein-synthesis-cost",
+      "summary": "An autonomous lab combining OpenAI’s GPT-5 with Ginkgo Bioworks’ cloud automation cut cell-free protein synthesis costs by 40% through closed-loop experimentation.",
+      "published_at": "Thu, 05 Feb 2026 11:00:00 GMT",
+      "source_via": "rss"
+    },
+    {
+      "source_id": "openai-news-engineering",
+      "source_name": "OpenAI News (Engineering)",
+      "title": "Introducing Trusted Access for Cyber",
+      "url": "https://openai.com/index/trusted-access-for-cyber",
+      "summary": "OpenAI introduces Trusted Access for Cyber, a trust-based framework that expands access to frontier cyber capabilities while strengthening safeguards against misuse.",
+      "published_at": "Thu, 05 Feb 2026 10:00:00 GMT",
+      "source_via": "rss"
+    },
+    {
+      "source_id": "openai-news-engineering",
+      "source_name": "OpenAI News (Engineering)",
+      "title": "Introducing OpenAI Frontier",
+      "url": "https://openai.com/index/introducing-openai-frontier",
+      "summary": "OpenAI Frontier is an enterprise platform for building, deploying, and managing AI agents with shared context, onboarding, permissions, and governance.",
+      "published_at": "Thu, 05 Feb 2026 06:00:00 GMT",
+      "source_via": "rss"
+    },
+    {
+      "source_id": "openai-news-engineering",
+      "source_name": "OpenAI News (Engineering)",
+      "title": "GPT-5.3-Codex System Card",
+      "url": "https://openai.com/index/gpt-5-3-codex-system-card",
+      "summary": "GPT‑5.3-Codex is the most capable agentic coding model to date, combining the frontier coding performance of GPT‑5.2-Codex with the reasoning and professional knowledge capabilities of GPT‑5.2.",
+      "published_at": "Thu, 05 Feb 2026 00:00:00 GMT",
+      "source_via": "rss"
+    },
+    {
+      "source_id": "openai-news-engineering",
+      "source_name": "OpenAI News (Engineering)",
+      "title": "Navigating health questions with ChatGPT",
+      "url": "https://openai.com/index/navigating-health-questions",
+      "summary": "A family shares how ChatGPT helped them prepare for critical cancer treatment decisions for their son alongside expert guidance from his doctors.",
+      "published_at": "Thu, 05 Feb 2026 00:00:00 GMT",
+      "source_via": "rss"
+    },
+    {
+      "source_id": "openai-news-engineering",
+      "source_name": "OpenAI News (Engineering)",
+      "title": "Introducing GPT-5.3-Codex",
+      "url": "https://openai.com/index/introducing-gpt-5-3-codex",
+      "summary": "GPT-5.3-Codex is a Codex-native agent that pairs frontier coding performance with general reasoning to support long-horizon, real-world technical work.",
+      "published_at": "Thu, 05 Feb 2026 00:00:00 GMT",
+      "source_via": "rss"
+    },
+    {
+      "source_id": "openai-news-engineering",
+      "source_name": "OpenAI News (Engineering)",
+      "title": "Unlocking the Codex harness: how we built the App Server",
+      "url": "https://openai.com/index/unlocking-the-codex-harness",
+      "summary": "Learn how to embed the Codex agent using the Codex App Server, a bidirectional JSON-RPC API powering streaming progress, tool use, approvals, and diffs.",
+      "published_at": "Wed, 04 Feb 2026 13:00:00 GMT",
+      "source_via": "rss"
+    },
+    {
+      "source_id": "openai-news-engineering",
+      "source_name": "OpenAI News (Engineering)",
+      "title": "VfL Wolfsburg turns ChatGPT into a club-wide capability",
+      "url": "https://openai.com/index/vfl-wolfsburg",
+      "summary": "By focusing on people, not pilots, the Bundesliga club is scaling efficiency, creativity, and knowledge—without losing its football identity.",
+      "published_at": "Wed, 04 Feb 2026 00:00:00 GMT",
+      "source_via": "rss"
+    },
+    {
+      "source_id": "claude-blog",
+      "source_name": "Claude Blog",
+      "title": "Bringing automated preview, review, and merge to Claude Code on desktop",
+      "url": "https://claude.com/blog/preview-review-and-merge-with-claude-code",
+      "summary": "",
+      "published_at": "2026-02-20T00:00:00+00:00",
+      "source_via": "html"
+    },
+    {
+      "source_id": "claude-blog",
+      "source_name": "Claude Blog",
+      "title": "Increase web search accuracy and efficiency with dynamic filtering",
+      "url": "https://claude.com/blog/improved-web-search-with-dynamic-filtering",
+      "summary": "",
+      "published_at": "2026-02-17T00:00:00+00:00",
+      "source_via": "html"
+    },
+    {
+      "source_id": "claude-blog",
+      "source_name": "Claude Blog",
+      "title": "Claude Enterprise, now available self-serve",
+      "url": "https://claude.com/blog/self-serve-enterprise",
+      "summary": "",
+      "published_at": "2026-02-12T00:00:00+00:00",
+      "source_via": "html"
+    },
+    {
+      "source_id": "claude-blog",
+      "source_name": "Claude Blog",
+      "title": "Advancing finance with Claude Opus 4.6",
+      "url": "https://claude.com/blog/opus-4-6-finance",
+      "summary": "",
+      "published_at": "2026-02-05T00:00:00+00:00",
+      "source_via": "html"
+    },
+    {
+      "source_id": "claude-blog",
+      "source_name": "Claude Blog",
+      "title": "Customize Cowork with plugins",
+      "url": "https://claude.com/blog/cowork-plugins",
+      "summary": "",
+      "published_at": "2026-01-30T00:00:00+00:00",
+      "source_via": "html"
+    },
+    {
+      "source_id": "claude-blog",
+      "source_name": "Claude Blog",
+      "title": "A complete guide to building skills for Claude",
+      "url": "https://claude.com/blog/complete-guide-to-building-skills-for-claude",
+      "summary": "",
+      "published_at": "2026-01-29T00:00:00+00:00",
+      "source_via": "html"
+    },
+    {
+      "source_id": "claude-blog",
+      "source_name": "Claude Blog",
+      "title": "Understand Claude Code’s impact with contribution metrics",
+      "url": "https://claude.com/blog/contribution-metrics",
+      "summary": "",
+      "published_at": "2026-01-29T00:00:00+00:00",
+      "source_via": "html"
+    },
+    {
+      "source_id": "claude-blog",
+      "source_name": "Claude Blog",
+      "title": "Updates to Claude Team",
+      "url": "https://claude.com/blog/claude-team-updates",
+      "summary": "",
+      "published_at": "2026-01-28T00:00:00+00:00",
+      "source_via": "html"
+    },
+    {
+      "source_id": "claude-blog",
+      "source_name": "Claude Blog",
+      "title": "Your favorite work tools are now interactive connectors inside Claude",
+      "url": "https://claude.com/blog/interactive-tools-in-claude",
+      "summary": "",
+      "published_at": "2026-01-26T00:00:00+00:00",
+      "source_via": "html"
+    },
+    {
+      "source_id": "claude-blog",
+      "source_name": "Claude Blog",
+      "title": "Building multi-agent systems: When and how to use them",
+      "url": "https://claude.com/blog/building-multi-agent-systems-when-and-how-to-use-them",
+      "summary": "",
+      "published_at": "2026-01-23T00:00:00+00:00",
+      "source_via": "html"
+    },
+    {
+      "source_id": "claude-blog",
+      "source_name": "Claude Blog",
+      "title": "Building agents with Skills: Equipping agents for specialized work",
+      "url": "https://claude.com/blog/building-agents-with-skills-equipping-agents-for-specialized-work",
+      "summary": "",
+      "published_at": "2026-01-22T00:00:00+00:00",
+      "source_via": "html"
+    },
+    {
+      "source_id": "claude-blog",
+      "source_name": "Claude Blog",
+      "title": "Eight trends defining how software gets built in 2026",
+      "url": "https://claude.com/blog/eight-trends-defining-how-software-gets-built-in-2026",
+      "summary": "",
+      "published_at": "2026-01-21T00:00:00+00:00",
+      "source_via": "html"
+    },
+    {
+      "source_id": "claude-blog",
+      "source_name": "Claude Blog",
+      "title": "Cowork: Claude Code for the rest of your work",
+      "url": "https://claude.com/blog/cowork-research-preview",
+      "summary": "",
+      "published_at": "2026-01-12T00:00:00+00:00",
+      "source_via": "html"
+    },
+    {
+      "source_id": "claude-blog",
+      "source_name": "Claude Blog",
+      "title": "How enterprises are building AI agents in 2026",
+      "url": "https://claude.com/blog/how-enterprises-are-building-ai-agents-in-2026",
+      "summary": "",
+      "published_at": "2025-12-09T00:00:00+00:00",
+      "source_via": "html"
+    },
+    {
+      "source_id": "claude-blog",
+      "source_name": "Claude Blog",
+      "title": "Improving frontend design through Skills",
+      "url": "https://claude.com/blog/improving-frontend-design-through-skills",
+      "summary": "",
+      "published_at": "2025-11-12T00:00:00+00:00",
+      "source_via": "html"
+    },
+    {
+      "source_id": "claude-blog",
+      "source_name": "Claude Blog",
+      "title": "Building AI agents for financial services",
+      "url": "https://claude.com/blog/building-ai-agents-in-financial-services",
+      "summary": "",
+      "published_at": "2025-10-30T00:00:00+00:00",
+      "source_via": "html"
+    },
+    {
+      "source_id": "claude-blog",
+      "source_name": "Claude Blog",
+      "title": "Claude Code on the web",
+      "url": "https://claude.com/blog/claude-code-on-the-web",
+      "summary": "",
+      "published_at": "2025-10-20T00:00:00+00:00",
+      "source_via": "html"
+    },
+    {
+      "source_id": "claude-blog",
+      "source_name": "Claude Blog",
+      "title": "Claude and Slack",
+      "url": "https://claude.com/blog/claude-and-slack",
+      "summary": "",
+      "published_at": "2025-10-01T00:00:00+00:00",
+      "source_via": "html"
+    },
+    {
+      "source_id": "claude-blog",
+      "source_name": "Claude Blog",
+      "title": "Piloting Claude in Chrome",
+      "url": "https://claude.com/blog/claude-for-chrome",
+      "summary": "",
+      "published_at": "2025-08-25T00:00:00+00:00",
+      "source_via": "html"
+    },
+    {
+      "source_id": "claude-blog",
+      "source_name": "Claude Blog",
+      "title": "How Anthropic teams use Claude Code",
+      "url": "https://claude.com/blog/how-anthropic-teams-use-claude-code",
+      "summary": "",
+      "published_at": "2025-07-24T00:00:00+00:00",
+      "source_via": "html"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "openai-news-engineering",
+      "source_name": "OpenAI News (Engineering)",
+      "homepage": "https://openai.com/news/engineering/",
+      "mode": "rss_config",
+      "feed_url": "https://openai.com/news/rss.xml",
+      "feed_status": "confirmed",
+      "check_method": "configured",
+      "status": "ok",
+      "item_count": 20,
+      "checked_at": "2026-02-22T02:51:35.922948+00:00",
+      "error": "",
+      "retry_attempted": false,
+      "retry_succeeded": false,
+      "retry_count": 0,
+      "skip_reason": "",
+      "health_level": "healthy",
+      "cooldown_until": null
+    },
+    {
+      "source_id": "claude-blog",
+      "source_name": "Claude Blog",
+      "homepage": "https://claude.com/blog",
+      "mode": "html",
+      "feed_url": null,
+      "feed_status": "not_found",
+      "check_method": "http_probe",
+      "status": "ok",
+      "item_count": 20,
+      "checked_at": "2026-02-22T02:51:38.995060+00:00",
+      "error": "",
+      "retry_attempted": false,
+      "retry_succeeded": false,
+      "retry_count": 0,
+      "skip_reason": "",
+      "health_level": "healthy",
+      "cooldown_until": null
+    }
+  ]
+}

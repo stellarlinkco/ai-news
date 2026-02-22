@@ -1,0 +1,26 @@
+{
+  "history": [
+    {
+      "date": "2026-02-22",
+      "generated_at": "2026-02-22T03:03:28.082996+00:00",
+      "new_items_count": 0,
+      "sources_checked": 19,
+      "sources_successful": 19,
+      "top_titles": [
+        "Beyond the Prompt – Why and How to Fine-tune Your Own Models",
+        "Skills Night: 69,000+ ways agents are getting smarter",
+        "Qwen 3.5 Plus is on AI Gateway",
+        "Foundry IQ in Microsoft Agent Framework",
+        "Scale LLM fine-tuning with Hugging Face and Amazon SageMaker AI"
+      ]
+    },
+    {
+      "date": "2026-02-21",
+      "generated_at": "2026-02-21T15:06:19.558309+00:00",
+      "new_items_count": 0,
+      "sources_checked": 19,
+      "sources_successful": 19,
+      "top_titles": []
+    }
+  ]
+}

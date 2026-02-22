@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Daily Intel</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif; margin: 24px; color: #1f2937; background: #f8fafc; }
+    h1 { margin: 0 0 8px; }
+    .meta { color: #475569; margin-bottom: 20px; }
+    .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px; margin: 10px 0; }
+    .source { color: #334155; font-size: 13px; margin-bottom: 6px; }
+    .title a { text-decoration: none; color: #0f172a; font-weight: 600; }
+    .summary { color: #334155; margin-top: 8px; line-height: 1.5; }
+    .tags { margin-top: 8px; color: #0f766e; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <h1>AI Daily Intel</h1>
+  <div class="meta" id="meta">加载中...</div>
+  <div id="list"></div>
+  <script>
+    async function run() {
+      const latest = await fetch('./data/latest.json').then(r => r.json());
+      const meta = document.getElementById('meta');
+      const list = document.getElementById('list');
+      meta.textContent = `日期: ${latest.date} · 新增: ${latest.new_items_count} · 来源: ${latest.sources_checked}`;
+      latest.items.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <div class="source">${item.source_name} · 相关性 ${item.relevance}</div>
+          <div class="title"><a href="${item.url}" target="_blank" rel="noreferrer">${item.title}</a></div>
+          <div class="summary">${item.ai_summary || ''}</div>
+          <div class="tags">${(item.tags || []).join(' / ')}</div>
+        `;
+        list.appendChild(card);
+      });
+    }
+    run().catch(error => {
+      document.getElementById('meta').textContent = '加载失败: ' + error;
+    });
+  </script>
+</body>
+</html>

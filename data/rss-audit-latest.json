@@ -1,0 +1,535 @@
+{
+  "sources_total": 19,
+  "confirmed_total": 11,
+  "checked_at": "2026-02-22T02:55:30.972687+00:00",
+  "results": [
+    {
+      "id": "openai-news-engineering",
+      "name": "OpenAI News (Engineering)",
+      "homepage": "https://openai.com/news/engineering/",
+      "feed_url": "https://openai.com/news/rss.xml",
+      "status": "confirmed",
+      "checked_at": "2026-02-22T02:55:30.972687+00:00",
+      "check_method": "http_probe",
+      "homepage_error": "http_403",
+      "probe_logs": [
+        {
+          "url": "https://openai.com/news/rss.xml",
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "id": "openai-developers-blog",
+      "name": "OpenAI Developers Blog",
+      "homepage": "https://developers.openai.com/blog/",
+      "feed_url": "https://developers.openai.com/rss.xml",
+      "status": "confirmed",
+      "checked_at": "2026-02-22T02:55:30.786139+00:00",
+      "check_method": "http_probe",
+      "homepage_error": "",
+      "probe_logs": [
+        {
+          "url": "https://developers.openai.com/rss.xml",
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-engineering",
+      "name": "Anthropic Engineering",
+      "homepage": "https://www.anthropic.com/engineering",
+      "feed_url": null,
+      "status": "not_found",
+      "checked_at": "2026-02-22T02:56:03.957191+00:00",
+      "check_method": "http_probe",
+      "homepage_error": "",
+      "probe_logs": [
+        {
+          "url": "https://www.anthropic.com/engineering/rss.xml",
+          "result": "http_404"
+        },
+        {
+          "url": "https://www.anthropic.com/rss.xml",
+          "result": "http_404"
+        },
+        {
+          "url": "https://www.anthropic.com/news/rss.xml",
+          "result": "http_404"
+        },
+        {
+          "url": "https://www.anthropic.com/engineering/feed",
+          "result": "http_404"
+        },
+        {
+          "url": "https://www.anthropic.com/engineering/feed/",
+          "result": "http_404"
+        },
+        {
+          "url": "https://www.anthropic.com/engineering/rss",
+          "result": "http_404"
+        },
+        {
+          "url": "https://www.anthropic.com/engineering/rss/",
+          "result": "http_404"
+        },
+        {
+          "url": "https://www.anthropic.com/engineering/feed.xml",
+          "result": "http_404"
+        }
+      ]
+    },
+    {
+      "id": "claude-blog",
+      "name": "Claude Blog",
+      "homepage": "https://claude.com/blog",
+      "feed_url": null,
+      "status": "not_found",
+      "checked_at": "2026-02-22T02:55:31.904916+00:00",
+      "check_method": "http_probe",
+      "homepage_error": "",
+      "probe_logs": [
+        {
+          "url": "https://claude.com/blog/rss.xml",
+          "result": "http_404"
+        },
+        {
+          "url": "https://claude.com/rss.xml",
+          "result": "http_404"
+        },
+        {
+          "url": "https://claude.com/blog/feed",
+          "result": "http_404"
+        },
+        {
+          "url": "https://claude.com/blog/feed/",
+          "result": "http_404"
+        },
+        {
+          "url": "https://claude.com/blog/rss",
+          "result": "http_404"
+        },
+        {
+          "url": "https://claude.com/blog/rss/",
+          "result": "http_404"
+        },
+        {
+          "url": "https://claude.com/blog/feed.xml",
+          "result": "http_404"
+        },
+        {
+          "url": "https://claude.com/blog/atom.xml",
+          "result": "http_404"
+        }
+      ]
+    },
+    {
+      "id": "manus-blog",
+      "name": "Manus Blog",
+      "homepage": "https://manus.im/blog",
+      "feed_url": null,
+      "status": "not_found",
+      "checked_at": "2026-02-22T02:55:38.089355+00:00",
+      "check_method": "http_probe",
+      "homepage_error": "",
+      "probe_logs": [
+        {
+          "url": "https://manus.im/blog/rss.xml",
+          "result": "http_404"
+        },
+        {
+          "url": "https://manus.im/rss.xml",
+          "result": "http_404"
+        },
+        {
+          "url": "https://manus.im/blog/feed",
+          "result": "http_404"
+        },
+        {
+          "url": "https://manus.im/blog/feed/",
+          "result": "http_404"
+        },
+        {
+          "url": "https://manus.im/blog/rss",
+          "result": "http_404"
+        },
+        {
+          "url": "https://manus.im/blog/rss/",
+          "result": "http_404"
+        },
+        {
+          "url": "https://manus.im/blog/feed.xml",
+          "result": "http_404"
+        },
+        {
+          "url": "https://manus.im/blog/atom.xml",
+          "result": "http_404"
+        }
+      ]
+    },
+    {
+      "id": "langchain-blog",
+      "name": "LangChain Blog",
+      "homepage": "https://blog.langchain.com/",
+      "feed_url": "https://blog.langchain.com/rss/",
+      "status": "confirmed",
+      "checked_at": "2026-02-22T02:55:30.904036+00:00",
+      "check_method": "http_probe",
+      "homepage_error": "",
+      "probe_logs": [
+        {
+          "url": "https://blog.langchain.com/rss/",
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "id": "huggingface-blog",
+      "name": "Hugging Face Blog",
+      "homepage": "https://huggingface.co/blog/",
+      "feed_url": "https://huggingface.co/blog/feed.xml",
+      "status": "confirmed",
+      "checked_at": "2026-02-22T02:55:31.708743+00:00",
+      "check_method": "http_probe",
+      "homepage_error": "",
+      "probe_logs": [
+        {
+          "url": "https://huggingface.co/blog/feed.xml",
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "id": "github-blog",
+      "name": "GitHub Blog",
+      "homepage": "https://github.blog/",
+      "feed_url": "https://github.blog/feed/",
+      "status": "confirmed",
+      "checked_at": "2026-02-22T02:55:30.797706+00:00",
+      "check_method": "http_probe",
+      "homepage_error": "",
+      "probe_logs": [
+        {
+          "url": "https://github.blog/feed/",
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "id": "cloudflare-blog",
+      "name": "Cloudflare Blog",
+      "homepage": "https://blog.cloudflare.com/",
+      "feed_url": "https://blog.cloudflare.com/rss/",
+      "status": "confirmed",
+      "checked_at": "2026-02-22T02:55:31.722246+00:00",
+      "check_method": "http_probe",
+      "homepage_error": "",
+      "probe_logs": [
+        {
+          "url": "https://blog.cloudflare.com/rss/",
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "id": "vercel-blog",
+      "name": "Vercel Blog",
+      "homepage": "https://vercel.com/blog",
+      "feed_url": "https://vercel.com/atom",
+      "status": "confirmed",
+      "checked_at": "2026-02-22T02:55:31.331700+00:00",
+      "check_method": "http_probe",
+      "homepage_error": "",
+      "probe_logs": [
+        {
+          "url": "https://vercel.com/atom",
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "id": "google-research-blog",
+      "name": "Google Research Blog",
+      "homepage": "https://research.google/blog/",
+      "feed_url": "https://research.google/blog/rss",
+      "status": "confirmed",
+      "checked_at": "2026-02-22T02:55:31.837746+00:00",
+      "check_method": "http_probe",
+      "homepage_error": "",
+      "probe_logs": [
+        {
+          "url": "https://research.google/blog/rss",
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "id": "deepmind-blog",
+      "name": "Google DeepMind Blog",
+      "homepage": "https://deepmind.google/discover/blog/",
+      "feed_url": "https://deepmind.google/blog/rss.xml",
+      "status": "confirmed",
+      "checked_at": "2026-02-22T02:55:32.370490+00:00",
+      "check_method": "http_probe",
+      "homepage_error": "",
+      "probe_logs": [
+        {
+          "url": "https://deepmind.google/blog/rss.xml",
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "id": "meta-ai-blog",
+      "name": "Meta AI Blog",
+      "homepage": "https://ai.meta.com/blog/",
+      "feed_url": null,
+      "status": "not_found",
+      "checked_at": "2026-02-22T02:55:38.800182+00:00",
+      "check_method": "http_probe",
+      "homepage_error": "",
+      "probe_logs": [
+        {
+          "url": "https://ai.meta.com/blog/rss/",
+          "result": "http_404"
+        },
+        {
+          "url": "https://ai.meta.com/blog/feed/",
+          "result": "http_404"
+        },
+        {
+          "url": "https://ai.meta.com/blog/feed",
+          "result": "http_404"
+        },
+        {
+          "url": "https://ai.meta.com/blog/rss",
+          "result": "http_404"
+        },
+        {
+          "url": "https://ai.meta.com/blog/rss.xml",
+          "result": "http_404"
+        },
+        {
+          "url": "https://ai.meta.com/blog/feed.xml",
+          "result": "http_404"
+        },
+        {
+          "url": "https://ai.meta.com/blog/atom.xml",
+          "result": "http_404"
+        },
+        {
+          "url": "https://ai.meta.com/blog/all.atom",
+          "result": "http_404"
+        }
+      ]
+    },
+    {
+      "id": "microsoft-foundry-blog",
+      "name": "Microsoft Foundry Blog",
+      "homepage": "https://devblogs.microsoft.com/foundry/",
+      "feed_url": "https://devblogs.microsoft.com/foundry/feed/",
+      "status": "confirmed",
+      "checked_at": "2026-02-22T02:55:31.153773+00:00",
+      "check_method": "http_probe",
+      "homepage_error": "",
+      "probe_logs": [
+        {
+          "url": "https://devblogs.microsoft.com/foundry/feed/",
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "id": "aws-ml-blog",
+      "name": "AWS Machine Learning Blog",
+      "homepage": "https://aws.amazon.com/blogs/machine-learning/",
+      "feed_url": "https://aws.amazon.com/blogs/machine-learning/feed/",
+      "status": "confirmed",
+      "checked_at": "2026-02-22T02:55:32.196637+00:00",
+      "check_method": "http_probe",
+      "homepage_error": "",
+      "probe_logs": [
+        {
+          "url": "https://aws.amazon.com/blogs/machine-learning/feed/",
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "id": "mistral-news",
+      "name": "Mistral News",
+      "homepage": "https://mistral.ai/news",
+      "feed_url": null,
+      "status": "not_found",
+      "checked_at": "2026-02-22T02:55:42.652692+00:00",
+      "check_method": "http_probe",
+      "homepage_error": "",
+      "probe_logs": [
+        {
+          "url": "https://mistral.ai/news/rss.xml",
+          "result": "http_404"
+        },
+        {
+          "url": "https://mistral.ai/rss.xml",
+          "result": "http_404"
+        },
+        {
+          "url": "https://mistral.ai/news/feed",
+          "result": "http_404"
+        },
+        {
+          "url": "https://mistral.ai/news/feed/",
+          "result": "http_404"
+        },
+        {
+          "url": "https://mistral.ai/news/rss",
+          "result": "http_404"
+        },
+        {
+          "url": "https://mistral.ai/news/rss/",
+          "result": "http_404"
+        },
+        {
+          "url": "https://mistral.ai/news/feed.xml",
+          "result": "http_404"
+        },
+        {
+          "url": "https://mistral.ai/news/atom.xml",
+          "result": "http_404"
+        }
+      ]
+    },
+    {
+      "id": "cohere-blog",
+      "name": "Cohere Blog",
+      "homepage": "https://cohere.com/blog",
+      "feed_url": null,
+      "status": "not_found",
+      "checked_at": "2026-02-22T02:55:37.722272+00:00",
+      "check_method": "http_probe",
+      "homepage_error": "",
+      "probe_logs": [
+        {
+          "url": "https://cohere.com/blog/rss.xml",
+          "result": "not_feed_content_type:text/html; charset=utf-8"
+        },
+        {
+          "url": "https://cohere.com/blog/feed.xml",
+          "result": "http_404"
+        },
+        {
+          "url": "https://cohere.com/blog/feed",
+          "result": "http_404"
+        },
+        {
+          "url": "https://cohere.com/blog/feed/",
+          "result": "http_404"
+        },
+        {
+          "url": "https://cohere.com/blog/rss",
+          "result": "not_feed_content_type:text/html; charset=utf-8"
+        },
+        {
+          "url": "https://cohere.com/blog/rss/",
+          "result": "not_feed_content_type:text/html; charset=utf-8"
+        },
+        {
+          "url": "https://cohere.com/blog/atom.xml",
+          "result": "http_404"
+        },
+        {
+          "url": "https://cohere.com/blog/all.atom",
+          "result": "http_404"
+        }
+      ]
+    },
+    {
+      "id": "llamaindex-blog",
+      "name": "LlamaIndex Blog",
+      "homepage": "https://www.llamaindex.ai/blog",
+      "feed_url": null,
+      "status": "not_found",
+      "checked_at": "2026-02-22T02:55:33.414725+00:00",
+      "check_method": "http_probe",
+      "homepage_error": "",
+      "probe_logs": [
+        {
+          "url": "https://www.llamaindex.ai/blog/rss.xml",
+          "result": "http_404"
+        },
+        {
+          "url": "https://www.llamaindex.ai/rss.xml",
+          "result": "http_404"
+        },
+        {
+          "url": "https://www.llamaindex.ai/blog/feed",
+          "result": "http_404"
+        },
+        {
+          "url": "https://www.llamaindex.ai/blog/feed/",
+          "result": "http_404"
+        },
+        {
+          "url": "https://www.llamaindex.ai/blog/rss",
+          "result": "http_404"
+        },
+        {
+          "url": "https://www.llamaindex.ai/blog/rss/",
+          "result": "http_404"
+        },
+        {
+          "url": "https://www.llamaindex.ai/blog/feed.xml",
+          "result": "http_404"
+        },
+        {
+          "url": "https://www.llamaindex.ai/blog/atom.xml",
+          "result": "http_404"
+        }
+      ]
+    },
+    {
+      "id": "crewai-blog",
+      "name": "CrewAI Blog",
+      "homepage": "https://www.crewai.com/blog",
+      "feed_url": null,
+      "status": "not_found",
+      "checked_at": "2026-02-22T02:55:33.302014+00:00",
+      "check_method": "http_probe",
+      "homepage_error": "",
+      "probe_logs": [
+        {
+          "url": "https://www.crewai.com/blog/rss.xml",
+          "result": "http_404"
+        },
+        {
+          "url": "https://www.crewai.com/rss.xml",
+          "result": "http_404"
+        },
+        {
+          "url": "https://www.crewai.com/blog/feed",
+          "result": "http_404"
+        },
+        {
+          "url": "https://www.crewai.com/blog/feed/",
+          "result": "http_404"
+        },
+        {
+          "url": "https://www.crewai.com/blog/rss",
+          "result": "http_404"
+        },
+        {
+          "url": "https://www.crewai.com/blog/rss/",
+          "result": "http_404"
+        },
+        {
+          "url": "https://www.crewai.com/blog/feed.xml",
+          "result": "http_404"
+        },
+        {
+          "url": "https://www.crewai.com/blog/atom.xml",
+          "result": "http_404"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,731 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Daily Intel</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #0f172a;
+      --subtext: #475569;
+      --line: #e2e8f0;
+      --brand: #2563eb;
+      --brand-soft: #dbeafe;
+      --warn: #9a3412;
+      --warn-soft: #ffedd5;
+      --error: #b91c1c;
+      --error-soft: #fee2e2;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif;
+      margin: 24px;
+      color: var(--text);
+      background: var(--bg);
+    }
+    h1 {
+      margin: 0 0 8px;
+    }
+    .meta {
+      color: var(--subtext);
+      margin-bottom: 12px;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 14px;
+    }
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .controls input,
+    .controls select,
+    .controls button {
+      box-sizing: border-box;
+      width: 100%;
+      min-height: 36px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: 14px;
+      background: #fff;
+      color: var(--text);
+    }
+    .controls button {
+      cursor: pointer;
+      border-color: #bfdbfe;
+      color: #1d4ed8;
+      background: #eff6ff;
+    }
+    .controls button:hover {
+      background: #dbeafe;
+    }
+    .viewbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .viewtext {
+      color: var(--subtext);
+      font-size: 13px;
+      margin-right: auto;
+    }
+    .viewbar button {
+      min-height: 30px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      background: #fff;
+      color: #1e293b;
+      padding: 4px 10px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .viewbar button:disabled {
+      cursor: not-allowed;
+      opacity: 0.45;
+    }
+    .history {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .history button {
+      border: 1px solid #cbd5e1;
+      border-radius: 999px;
+      background: #fff;
+      color: #334155;
+      padding: 4px 10px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .history button.scope {
+      border-color: #bfdbfe;
+      background: #eff6ff;
+    }
+    .history button.active {
+      border-color: #3b82f6;
+      background: var(--brand-soft);
+      color: #1d4ed8;
+      font-weight: 600;
+    }
+    .status {
+      margin: 10px 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 10px;
+      color: #334155;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+    }
+    .status.warn {
+      color: var(--warn);
+      border-color: #fed7aa;
+      background: var(--warn-soft);
+    }
+    .status.error {
+      color: var(--error);
+      border-color: #fecaca;
+      background: var(--error-soft);
+    }
+    .status button {
+      border: 1px solid #fca5a5;
+      border-radius: 6px;
+      background: #fff;
+      color: #b91c1c;
+      min-height: 28px;
+      padding: 0 10px;
+      cursor: pointer;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 14px;
+      margin: 10px 0;
+    }
+    .source {
+      color: #334155;
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+    .title a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+    }
+    .title a:hover {
+      text-decoration: underline;
+    }
+    .summary {
+      color: #334155;
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+    .tags {
+      margin-top: 8px;
+      color: #0f766e;
+      font-size: 12px;
+    }
+    .findings {
+      margin-top: 8px;
+      color: #334155;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .findings ul {
+      margin: 6px 0 0 18px;
+      padding: 0;
+    }
+    .empty {
+      border: 1px dashed #cbd5e1;
+      border-radius: 10px;
+      padding: 18px;
+      text-align: center;
+      color: #64748b;
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>AI Daily Intel</h1>
+  <div class="meta" id="meta">初始化中...</div>
+  <div class="panel">
+    <div class="controls">
+      <input id="searchInput" type="search" placeholder="搜索标题 / 摘要 / 标签" />
+      <select id="sourceFilter">
+        <option value="">全部来源</option>
+      </select>
+      <select id="tagFilter">
+        <option value="">全部标签</option>
+      </select>
+      <select id="relevanceFilter">
+        <option value="0">全部相关性</option>
+        <option value="70">相关性 ≥ 70</option>
+        <option value="80">相关性 ≥ 80</option>
+        <option value="90">相关性 ≥ 90</option>
+      </select>
+      <select id="rangeFilter">
+        <option value="7">最近 7 天</option>
+        <option value="30" selected>最近 30 天</option>
+        <option value="90">最近 90 天</option>
+        <option value="180">最近 180 天</option>
+      </select>
+      <button id="resetBtn" type="button">重置过滤</button>
+    </div>
+    <div class="viewbar">
+      <span class="viewtext" id="viewText">范围模式</span>
+      <button id="backToRangeBtn" type="button" hidden>回到范围模式</button>
+      <button id="prevDayBtn" type="button" hidden>上一天</button>
+      <button id="nextDayBtn" type="button" hidden>下一天</button>
+    </div>
+    <div class="history" id="historyList"></div>
+  </div>
+  <div class="status" id="status" hidden>
+    <span id="statusText"></span>
+    <button id="retryBtn" type="button" hidden>重试</button>
+  </div>
+  <div id="list"></div>
+  <script>
+    const RANGE_OPTIONS = [7, 30, 90, 180];
+    const DAY_MS = 24 * 60 * 60 * 1000;
+    const dom = {
+      meta: document.getElementById('meta'),
+      list: document.getElementById('list'),
+      status: document.getElementById('status'),
+      statusText: document.getElementById('statusText'),
+      retryBtn: document.getElementById('retryBtn'),
+      searchInput: document.getElementById('searchInput'),
+      sourceFilter: document.getElementById('sourceFilter'),
+      tagFilter: document.getElementById('tagFilter'),
+      relevanceFilter: document.getElementById('relevanceFilter'),
+      rangeFilter: document.getElementById('rangeFilter'),
+      resetBtn: document.getElementById('resetBtn'),
+      historyList: document.getElementById('historyList'),
+      viewText: document.getElementById('viewText'),
+      backToRangeBtn: document.getElementById('backToRangeBtn'),
+      prevDayBtn: document.getElementById('prevDayBtn'),
+      nextDayBtn: document.getElementById('nextDayBtn'),
+    };
+    const state = {
+      query: '',
+      source: '',
+      tag: '',
+      relevance: 0,
+      rangeDays: 30,
+      mode: 'range',
+      date: '',
+    };
+    const store = {
+      latest: null,
+      latestDate: '',
+      historyDates: [],
+      historyMeta: new Map(),
+      dailyCache: new Map(),
+      token: 0,
+    };
+
+    function isValidDate(dateText) {
+      return /^\d{4}-\d{2}-\d{2}$/.test(dateText || '');
+    }
+
+    function parseDateOnly(dateText) {
+      if (!isValidDate(dateText)) return null;
+      const [year, month, day] = dateText.split('-').map(Number);
+      return Date.UTC(year, month - 1, day);
+    }
+
+    function parseAnyDate(value) {
+      const parsed = Date.parse(value || '');
+      return Number.isNaN(parsed) ? 0 : parsed;
+    }
+
+    function uniqueSorted(values) {
+      return [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b, 'zh-CN'));
+    }
+
+    function safeItems(payload) {
+      return Array.isArray(payload && payload.items) ? payload.items : [];
+    }
+
+    function setStatus(message, level, withRetry) {
+      if (!message) {
+        dom.status.hidden = true;
+        dom.retryBtn.hidden = true;
+        return;
+      }
+      dom.status.hidden = false;
+      dom.status.className = level ? `status ${level}` : 'status';
+      dom.statusText.textContent = message;
+      dom.retryBtn.hidden = !withRetry;
+    }
+
+    async function fetchJSON(path) {
+      const response = await fetch(path, { cache: 'no-store' });
+      if (!response.ok) throw new Error(`${path} 请求失败: ${response.status}`);
+      return response.json();
+    }
+
+    function normalizeHistory(raw) {
+      const list = Array.isArray(raw) ? raw : Array.isArray(raw && raw.history) ? raw.history : [];
+      return list.filter(entry => isValidDate(entry && entry.date));
+    }
+
+    function mergeHistoryDates(latestDate, entries) {
+      const dates = entries.map(entry => entry.date);
+      if (isValidDate(latestDate)) dates.push(latestDate);
+      return uniqueSorted(dates).sort((a, b) => b.localeCompare(a));
+    }
+
+    function readUrlState() {
+      const params = new URLSearchParams(window.location.search);
+      state.query = (params.get('q') || '').trim();
+      state.source = (params.get('source') || '').trim();
+      state.tag = (params.get('tag') || '').trim();
+      const relevance = Number(params.get('relevance') || 0);
+      state.relevance = [0, 70, 80, 90].includes(relevance) ? relevance : 0;
+      const range = Number(params.get('range'));
+      state.rangeDays = RANGE_OPTIONS.includes(range) ? range : 30;
+      const day = (params.get('date') || '').trim();
+      if (isValidDate(day)) {
+        state.mode = 'day';
+        state.date = day;
+      } else {
+        state.mode = 'range';
+        state.date = '';
+      }
+    }
+
+    function writeUrlState() {
+      const params = new URLSearchParams();
+      if (state.query) params.set('q', state.query);
+      if (state.source) params.set('source', state.source);
+      if (state.tag) params.set('tag', state.tag);
+      if (state.relevance > 0) params.set('relevance', String(state.relevance));
+      if (state.mode === 'day' && state.date) {
+        params.set('date', state.date);
+      } else {
+        params.set('range', String(state.rangeDays));
+      }
+      const query = params.toString();
+      const nextURL = query ? `${window.location.pathname}?${query}` : window.location.pathname;
+      window.history.replaceState(null, '', nextURL);
+    }
+
+    function syncControls() {
+      dom.searchInput.value = state.query;
+      dom.relevanceFilter.value = String(state.relevance);
+      dom.rangeFilter.value = String(state.rangeDays);
+      const inDayMode = state.mode === 'day';
+      dom.rangeFilter.disabled = inDayMode;
+      dom.backToRangeBtn.hidden = !inDayMode;
+      dom.prevDayBtn.hidden = !inDayMode;
+      dom.nextDayBtn.hidden = !inDayMode;
+      if (inDayMode) {
+        dom.viewText.textContent = `单日模式：${state.date || '未选择日期'}`;
+      } else {
+        const anchor = store.latestDate || '无可用日期';
+        dom.viewText.textContent = `范围模式：最近 ${state.rangeDays} 天（基于 ${anchor}）`;
+      }
+    }
+
+    function pickScopeDates() {
+      if (!store.historyDates.length) return [];
+      if (state.mode === 'day') return state.date ? [state.date] : [];
+      const anchor = parseDateOnly(store.latestDate || store.historyDates[0]);
+      if (!anchor) return [];
+      const floor = anchor - (state.rangeDays - 1) * DAY_MS;
+      return store.historyDates.filter(date => {
+        const value = parseDateOnly(date);
+        return value !== null && value >= floor && value <= anchor;
+      });
+    }
+
+    async function loadDay(date) {
+      if (!isValidDate(date)) return null;
+      if (store.dailyCache.has(date)) return store.dailyCache.get(date);
+      try {
+        const payload = await fetchJSON(`./data/${date}.json`);
+        if (payload && typeof payload === 'object') payload.date = payload.date || date;
+        store.dailyCache.set(date, payload);
+        return payload;
+      } catch {
+        store.dailyCache.set(date, null);
+        return null;
+      }
+    }
+
+    async function loadScope(scopeDates) {
+      const payloads = await Promise.all(scopeDates.map(date => loadDay(date)));
+      const validPayloads = [];
+      const missingDates = [];
+      payloads.forEach((payload, index) => {
+        if (payload) validPayloads.push(payload);
+        else missingDates.push(scopeDates[index]);
+      });
+      if (!validPayloads.length && state.mode === 'range' && store.latest) validPayloads.push(store.latest);
+      return { payloads: validPayloads, missingDates };
+    }
+
+    function normalizeItems(payloads) {
+      const items = [];
+      payloads.forEach(payload => {
+        const day = isValidDate(payload && payload.date) ? payload.date : '';
+        safeItems(payload).forEach(item => {
+          items.push({
+            source_name: String(item && item.source_name || ''),
+            title: String(item && item.title || ''),
+            url: String(item && item.url || ''),
+            published_at: String(item && item.published_at || ''),
+            relevance: Number(item && item.relevance) || 0,
+            tags: Array.isArray(item && item.tags) ? item.tags.map(tag => String(tag)) : [],
+            ai_summary: String(item && item.ai_summary || ''),
+            key_findings: Array.isArray(item && item.key_findings)
+              ? item.key_findings.map(line => String(line || '').trim()).filter(Boolean)
+              : [],
+            reading_priority: String(item && item.reading_priority || ''),
+            technical_depth: Number(item && item.technical_depth),
+            estimated_reading_time: Number(item && item.estimated_reading_time),
+            day,
+          });
+        });
+      });
+      return items.sort((left, right) => (
+        right.relevance - left.relevance ||
+        parseAnyDate(right.published_at) - parseAnyDate(left.published_at) ||
+        right.day.localeCompare(left.day)
+      ));
+    }
+
+    function updateSelectOptions(select, values, current, fallbackLabel) {
+      const allOption = document.createElement('option');
+      allOption.value = '';
+      allOption.textContent = fallbackLabel;
+      select.textContent = '';
+      select.appendChild(allOption);
+      const sorted = uniqueSorted(values);
+      const shouldKeepCurrent = current && !sorted.includes(current);
+      if (shouldKeepCurrent) {
+        const option = document.createElement('option');
+        option.value = current;
+        option.textContent = `${current}（当前无匹配）`;
+        select.appendChild(option);
+      }
+      sorted.forEach(value => {
+        const option = document.createElement('option');
+        option.value = value;
+        option.textContent = value;
+        select.appendChild(option);
+      });
+      select.value = current || '';
+    }
+
+    function applyFilters(items) {
+      const query = state.query.trim().toLowerCase();
+      return items.filter(item => {
+        if (state.source && item.source_name !== state.source) return false;
+        if (state.tag && !item.tags.includes(state.tag)) return false;
+        if (state.relevance > 0 && item.relevance < state.relevance) return false;
+        if (!query) return true;
+        const joined = `${item.title} ${item.ai_summary} ${item.source_name} ${item.tags.join(' ')}`.toLowerCase();
+        return joined.includes(query);
+      });
+    }
+
+    function renderMeta(allCount, filteredCount, scopeDates, missingDates) {
+      const loadedDays = scopeDates.length - missingDates.length;
+      if (state.mode === 'day') {
+        dom.meta.textContent = `日期: ${state.date || '未知'} · 已加载日期: ${loadedDays}/${scopeDates.length || 1} · 匹配: ${filteredCount}/${allCount}`;
+      } else {
+        dom.meta.textContent = `范围: 最近 ${state.rangeDays} 天 · 已加载日期: ${scopeDates.length - missingDates.length}/${scopeDates.length} · 匹配: ${filteredCount}/${allCount}`;
+      }
+    }
+
+    function renderCard(item) {
+      const card = document.createElement('article');
+      card.className = 'card';
+
+      const source = document.createElement('div');
+      source.className = 'source';
+      const published = item.published_at ? ` · 发布时间 ${item.published_at}` : '';
+      const dayText = item.day ? ` · 数据日 ${item.day}` : '';
+      const priority = item.reading_priority ? ` · 优先级 ${item.reading_priority}` : '';
+      const depth = Number.isFinite(item.technical_depth) ? ` · 深度 ${item.technical_depth}` : '';
+      const reading = Number.isFinite(item.estimated_reading_time) ? ` · 约 ${item.estimated_reading_time} 分钟` : '';
+      source.textContent = `${item.source_name || '未知来源'} · 相关性 ${item.relevance}${priority}${depth}${reading}${published}${dayText}`;
+
+      const title = document.createElement('div');
+      title.className = 'title';
+      const link = document.createElement('a');
+      link.textContent = item.title || '(无标题)';
+      if (item.url) {
+        link.href = item.url;
+        link.target = '_blank';
+        link.rel = 'noreferrer';
+      }
+      title.appendChild(link);
+
+      const summary = document.createElement('div');
+      summary.className = 'summary';
+      summary.textContent = item.ai_summary || '暂无摘要';
+
+      const tags = document.createElement('div');
+      tags.className = 'tags';
+      tags.textContent = item.tags.length ? item.tags.join(' / ') : '无标签';
+
+      const findings = document.createElement('div');
+      findings.className = 'findings';
+      const findingList = Array.isArray(item.key_findings) ? item.key_findings : [];
+      if (findingList.length) {
+        const title = document.createElement('strong');
+        title.textContent = '关键发现';
+        const ul = document.createElement('ul');
+        findingList.slice(0, 3).forEach(text => {
+          const li = document.createElement('li');
+          li.textContent = String(text || '').trim();
+          ul.appendChild(li);
+        });
+        findings.appendChild(title);
+        findings.appendChild(ul);
+      } else {
+        findings.textContent = '关键发现：暂无';
+      }
+
+      card.appendChild(source);
+      card.appendChild(title);
+      card.appendChild(summary);
+      card.appendChild(tags);
+      card.appendChild(findings);
+      return card;
+    }
+
+    function renderList(items) {
+      dom.list.textContent = '';
+      if (!items.length) {
+        const empty = document.createElement('div');
+        empty.className = 'empty';
+        empty.textContent = '没有匹配结果，请调整搜索词或过滤条件。';
+        dom.list.appendChild(empty);
+        return;
+      }
+      items.forEach(item => dom.list.appendChild(renderCard(item)));
+    }
+
+    function renderHistory(scopeDates) {
+      dom.historyList.textContent = '';
+      if (!store.historyDates.length) {
+        const tip = document.createElement('span');
+        tip.className = 'viewtext';
+        tip.textContent = '暂无历史日期索引';
+        dom.historyList.appendChild(tip);
+        return;
+      }
+      store.historyDates.forEach(date => {
+        const button = document.createElement('button');
+        const meta = store.historyMeta.get(date);
+        const itemCount = meta && Number(meta.new_items_count) > 0 ? ` (${meta.new_items_count})` : '';
+        button.type = 'button';
+        button.textContent = `${date}${itemCount}`;
+        if (scopeDates.includes(date)) button.classList.add('scope');
+        if (state.mode === 'day' && state.date === date) button.classList.add('active');
+        button.addEventListener('click', () => {
+          state.mode = 'day';
+          state.date = date;
+          refresh();
+        });
+        dom.historyList.appendChild(button);
+      });
+      updateDayButtons();
+    }
+
+    function updateDayButtons() {
+      if (state.mode !== 'day' || !state.date) return;
+      const index = store.historyDates.indexOf(state.date);
+      dom.prevDayBtn.disabled = index < 0 || index >= store.historyDates.length - 1;
+      dom.nextDayBtn.disabled = index <= 0;
+    }
+
+    function navigateDay(step) {
+      const current = store.historyDates.indexOf(state.date);
+      if (current < 0) return;
+      const next = current + step;
+      if (next < 0 || next >= store.historyDates.length) return;
+      state.date = store.historyDates[next];
+      refresh();
+    }
+
+    function resetFilters() {
+      state.query = '';
+      state.source = '';
+      state.tag = '';
+      state.relevance = 0;
+      state.rangeDays = 30;
+      state.mode = 'range';
+      state.date = '';
+      syncControls();
+      refresh();
+    }
+
+    async function refresh() {
+      const token = ++store.token;
+      syncControls();
+      setStatus('加载中...', '', false);
+      try {
+        const scopeDates = pickScopeDates();
+        const { payloads, missingDates } = await loadScope(scopeDates);
+        if (token !== store.token) return;
+        const allItems = normalizeItems(payloads);
+        updateSelectOptions(
+          dom.sourceFilter,
+          allItems.map(item => item.source_name),
+          state.source,
+          '全部来源'
+        );
+        updateSelectOptions(
+          dom.tagFilter,
+          allItems.flatMap(item => item.tags),
+          state.tag,
+          '全部标签'
+        );
+        state.source = dom.sourceFilter.value;
+        state.tag = dom.tagFilter.value;
+        const filtered = applyFilters(allItems);
+        renderList(filtered);
+        renderMeta(allItems.length, filtered.length, scopeDates, missingDates);
+        renderHistory(scopeDates);
+        if (state.mode === 'day' && missingDates.includes(state.date)) {
+          setStatus(`提示: ${state.date} 无可用数据文件。`, 'warn', false);
+        } else if (missingDates.length) {
+          setStatus(`提示: ${missingDates.length} 天历史文件不存在，已自动跳过。`, 'warn', false);
+        } else {
+          setStatus('', '', false);
+        }
+        writeUrlState();
+      } catch (error) {
+        if (token !== store.token) return;
+        dom.list.textContent = '';
+        dom.meta.textContent = `加载失败: ${error && error.message ? error.message : error}`;
+        setStatus('数据加载失败，请稍后重试。', 'error', true);
+      }
+    }
+
+    function bindEvents() {
+      dom.searchInput.addEventListener('input', event => {
+        state.query = String(event.target.value || '').trim();
+        refresh();
+      });
+      dom.sourceFilter.addEventListener('change', event => {
+        state.source = String(event.target.value || '');
+        refresh();
+      });
+      dom.tagFilter.addEventListener('change', event => {
+        state.tag = String(event.target.value || '');
+        refresh();
+      });
+      dom.relevanceFilter.addEventListener('change', event => {
+        state.relevance = Number(event.target.value || 0);
+        refresh();
+      });
+      dom.rangeFilter.addEventListener('change', event => {
+        const value = Number(event.target.value || 30);
+        state.rangeDays = RANGE_OPTIONS.includes(value) ? value : 30;
+        state.mode = 'range';
+        state.date = '';
+        refresh();
+      });
+      dom.resetBtn.addEventListener('click', resetFilters);
+      dom.backToRangeBtn.addEventListener('click', () => {
+        state.mode = 'range';
+        state.date = '';
+        refresh();
+      });
+      dom.prevDayBtn.addEventListener('click', () => navigateDay(1));
+      dom.nextDayBtn.addEventListener('click', () => navigateDay(-1));
+      dom.retryBtn.addEventListener('click', bootstrap);
+    }
+
+    async function bootstrap() {
+      setStatus('初始化中...', '', false);
+      try {
+        const [latest, historyRaw] = await Promise.all([
+          fetchJSON('./data/latest.json'),
+          fetchJSON('./data/history.json').catch(() => ({ history: [] })),
+        ]);
+        store.latest = latest && typeof latest === 'object' ? latest : { items: [] };
+        if (isValidDate(store.latest.date)) {
+          store.latestDate = store.latest.date;
+          store.dailyCache.set(store.latest.date, store.latest);
+        } else {
+          store.latestDate = '';
+        }
+        const historyEntries = normalizeHistory(historyRaw);
+        store.historyMeta = new Map(historyEntries.map(entry => [entry.date, entry]));
+        store.historyDates = mergeHistoryDates(store.latestDate, historyEntries);
+        if (!store.latestDate && store.historyDates.length) store.latestDate = store.historyDates[0];
+        readUrlState();
+        if (!store.historyDates.length && store.latestDate) store.historyDates = [store.latestDate];
+        syncControls();
+        await refresh();
+      } catch (error) {
+        dom.meta.textContent = `加载失败: ${error && error.message ? error.message : error}`;
+        dom.list.textContent = '';
+        setStatus('初始化失败，未能读取 data/latest.json。', 'error', true);
+      }
+    }
+
+    bindEvents();
+    bootstrap();
+  </script>
+</body>
+</html>

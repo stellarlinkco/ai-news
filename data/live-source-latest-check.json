@@ -1,0 +1,294 @@
+{
+  "generated_at": "2026-02-22T03:29:32.960074+00:00",
+  "sources_total": 19,
+  "sources_ok": 19,
+  "sources_empty": 0,
+  "sources_error": 0,
+  "results": [
+    {
+      "source_id": "openai-news-engineering",
+      "source_name": "OpenAI News (Engineering)",
+      "status": "ok",
+      "mode": "rss_config",
+      "item_count": 20,
+      "feed_url": "https://openai.com/news/rss.xml",
+      "error": "",
+      "latest": {
+        "title": "Our First Proof submissions",
+        "url": "https://openai.com/index/first-proof-submissions",
+        "published_at": "Fri, 20 Feb 2026 14:30:00 GMT",
+        "source_via": "rss"
+      }
+    },
+    {
+      "source_id": "openai-developers-blog",
+      "source_name": "OpenAI Developers Blog",
+      "status": "ok",
+      "mode": "rss_config",
+      "item_count": 6,
+      "feed_url": "https://developers.openai.com/rss.xml",
+      "error": "",
+      "latest": {
+        "title": "Docs MCP",
+        "url": "https://developers.openai.com/resources/docs-mcp/",
+        "published_at": "Tue, 06 Jan 2026 00:00:00 GMT",
+        "source_via": "rss"
+      }
+    },
+    {
+      "source_id": "anthropic-engineering",
+      "source_name": "Anthropic Engineering",
+      "status": "ok",
+      "mode": "html",
+      "item_count": 18,
+      "feed_url": null,
+      "error": "",
+      "latest": {
+        "title": "Building a C compiler with a team of parallel Claudes Feb 05, 2026",
+        "url": "https://www.anthropic.com/engineering/building-c-compiler",
+        "published_at": "2026-02-05T00:00:00+00:00",
+        "source_via": "html"
+      }
+    },
+    {
+      "source_id": "claude-blog",
+      "source_name": "Claude Blog",
+      "status": "ok",
+      "mode": "html",
+      "item_count": 20,
+      "feed_url": null,
+      "error": "",
+      "latest": {
+        "title": "Bringing automated preview, review, and merge to Claude Code on desktop",
+        "url": "https://claude.com/blog/preview-review-and-merge-with-claude-code",
+        "published_at": "2026-02-20T00:00:00+00:00",
+        "source_via": "html"
+      }
+    },
+    {
+      "source_id": "manus-blog",
+      "source_name": "Manus Blog",
+      "status": "ok",
+      "mode": "html",
+      "item_count": 20,
+      "feed_url": null,
+      "error": "",
+      "latest": {
+        "title": "Vibecoding with Manus: From Beginner to Advanced Project Ideas Resources · February 17, 2026",
+        "url": "https://manus.im/blog/vibe-code-projects",
+        "published_at": "2026-02-17T00:00:00+00:00",
+        "source_via": "html_embedded"
+      }
+    },
+    {
+      "source_id": "langchain-blog",
+      "source_name": "LangChain Blog",
+      "status": "ok",
+      "mode": "rss_config",
+      "item_count": 15,
+      "feed_url": "https://blog.langchain.com/rss/",
+      "error": "",
+      "latest": {
+        "title": "How to Use Memory in Agent Builder",
+        "url": "https://blog.langchain.com/how-to-use-memory-in-agent-builder/",
+        "published_at": "Thu, 19 Feb 2026 18:28:14 GMT",
+        "source_via": "rss"
+      }
+    },
+    {
+      "source_id": "huggingface-blog",
+      "source_name": "Hugging Face Blog",
+      "status": "ok",
+      "mode": "rss_config",
+      "item_count": 20,
+      "feed_url": "https://huggingface.co/blog/feed.xml",
+      "error": "",
+      "latest": {
+        "title": "GGML and llama.cpp join HF to ensure the long-term progress of Local AI",
+        "url": "https://huggingface.co/blog/ggml-joins-hf",
+        "published_at": "Fri, 20 Feb 2026 00:00:00 GMT",
+        "source_via": "rss"
+      }
+    },
+    {
+      "source_id": "github-blog",
+      "source_name": "GitHub Blog",
+      "status": "ok",
+      "mode": "rss_config",
+      "item_count": 10,
+      "feed_url": "https://github.blog/feed/",
+      "error": "",
+      "latest": {
+        "title": "How AI is reshaping developer choice (and Octoverse data proves it)",
+        "url": "https://github.blog/ai-and-ml/generative-ai/how-ai-is-reshaping-developer-choice-and-octoverse-data-proves-it/",
+        "published_at": "Thu, 19 Feb 2026 17:00:00 +0000",
+        "source_via": "rss"
+      }
+    },
+    {
+      "source_id": "cloudflare-blog",
+      "source_name": "Cloudflare Blog",
+      "status": "ok",
+      "mode": "rss_config",
+      "item_count": 20,
+      "feed_url": "https://blog.cloudflare.com/rss/",
+      "error": "",
+      "latest": {
+        "title": "Cloudflare outage on February 20, 2026",
+        "url": "https://blog.cloudflare.com/cloudflare-outage-february-20-2026/",
+        "published_at": "Sat, 21 Feb 2026 00:00:00 GMT",
+        "source_via": "rss"
+      }
+    },
+    {
+      "source_id": "vercel-blog",
+      "source_name": "Vercel Blog",
+      "status": "ok",
+      "mode": "rss_config",
+      "item_count": 20,
+      "feed_url": "https://vercel.com/atom",
+      "error": "",
+      "latest": {
+        "title": "Skills Night: 69,000+ ways agents are getting smarter",
+        "url": "https://vercel.com/blog/skills-night-69000-ways-agents-are-getting-smarter",
+        "published_at": "2026-02-20T13:00:00.000Z",
+        "source_via": "rss"
+      }
+    },
+    {
+      "source_id": "google-research-blog",
+      "source_name": "Google Research Blog",
+      "status": "ok",
+      "mode": "rss_config",
+      "item_count": 20,
+      "feed_url": "https://research.google/blog/rss",
+      "error": "",
+      "latest": {
+        "title": "Teaching AI to read a map",
+        "url": "https://research.google/blog/teaching-ai-to-read-a-map/",
+        "published_at": "Tue, 17 Feb 2026 21:37:00 +0000",
+        "source_via": "rss"
+      }
+    },
+    {
+      "source_id": "deepmind-blog",
+      "source_name": "Google DeepMind Blog",
+      "status": "ok",
+      "mode": "rss_config",
+      "item_count": 20,
+      "feed_url": "https://deepmind.google/blog/rss.xml",
+      "error": "",
+      "latest": {
+        "title": "Gemini 3.1 Pro: A smarter model for your most complex tasks",
+        "url": "https://deepmind.google/blog/gemini-3-1-pro-a-smarter-model-for-your-most-complex-tasks/",
+        "published_at": "Thu, 19 Feb 2026 16:06:14 +0000",
+        "source_via": "rss"
+      }
+    },
+    {
+      "source_id": "meta-ai-blog",
+      "source_name": "Meta AI Blog",
+      "status": "ok",
+      "mode": "html",
+      "item_count": 12,
+      "feed_url": null,
+      "error": "",
+      "latest": {
+        "title": "Reducing Government Costs and Increasing Access to Greenspaces in the United Kingdom with DINO",
+        "url": "https://ai.meta.com/blog/forest-research-dino/",
+        "published_at": "2026-02-09T00:00:00+00:00",
+        "source_via": "html"
+      }
+    },
+    {
+      "source_id": "microsoft-foundry-blog",
+      "source_name": "Microsoft Foundry Blog",
+      "status": "ok",
+      "mode": "rss_config",
+      "item_count": 10,
+      "feed_url": "https://devblogs.microsoft.com/foundry/feed/",
+      "error": "",
+      "latest": {
+        "title": "Microsoft Agent Framework Reaches Release Candidate",
+        "url": "https://devblogs.microsoft.com/foundry/microsoft-agent-framework-reaches-release-candidate/",
+        "published_at": "Fri, 20 Feb 2026 05:51:29 +0000",
+        "source_via": "rss"
+      }
+    },
+    {
+      "source_id": "aws-ml-blog",
+      "source_name": "AWS Machine Learning Blog",
+      "status": "ok",
+      "mode": "rss_config",
+      "item_count": 20,
+      "feed_url": "https://aws.amazon.com/blogs/machine-learning/feed/",
+      "error": "",
+      "latest": {
+        "title": "Amazon SageMaker AI in 2025, a year in review part 1: Flexible Training Plans and improvements to price performance for inference workloads",
+        "url": "https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-ai-in-2025-a-year-in-review-part-1-flexible-training-plans-and-improvements-to-price-performance-for-inference-workloads/",
+        "published_at": "Fri, 20 Feb 2026 20:26:47 +0000",
+        "source_via": "rss"
+      }
+    },
+    {
+      "source_id": "mistral-news",
+      "source_name": "Mistral News",
+      "status": "ok",
+      "mode": "html",
+      "item_count": 1,
+      "feed_url": null,
+      "error": "",
+      "latest": {
+        "title": "Voxtral transcribes at the speed of sound. Research February 4, 2026 Mistral AI Precision diarization, real-time transcription, and a new audio playground.",
+        "url": "https://mistral.ai/news/voxtral-transcribe-2",
+        "published_at": "2026-02-04T00:00:00+00:00",
+        "source_via": "html"
+      }
+    },
+    {
+      "source_id": "cohere-blog",
+      "source_name": "Cohere Blog",
+      "status": "ok",
+      "mode": "html",
+      "item_count": 18,
+      "feed_url": null,
+      "error": "",
+      "latest": {
+        "title": "Cohere Labs Launches Tiny Aya, Making Multilingual AI Accessible",
+        "url": "https://cohere.com/blog/cohere-labs-tiny-aya",
+        "published_at": "2026-02-17T04:00:07.000-05:00",
+        "source_via": "html_embedded"
+      }
+    },
+    {
+      "source_id": "llamaindex-blog",
+      "source_name": "LlamaIndex Blog",
+      "status": "ok",
+      "mode": "html",
+      "item_count": 20,
+      "feed_url": null,
+      "error": "",
+      "latest": {
+        "title": "The Cost of Overthinking: Why Reasoning Models Fail at Document Parsing",
+        "url": "https://www.llamaindex.ai/blog/the-cost-of-overthinking-why-reasoning-models-fail-at-document-parsing",
+        "published_at": "2026-02-19T00:00:00+00:00",
+        "source_via": "html"
+      }
+    },
+    {
+      "source_id": "crewai-blog",
+      "source_name": "CrewAI Blog",
+      "status": "ok",
+      "mode": "html",
+      "item_count": 20,
+      "feed_url": null,
+      "error": "",
+      "latest": {
+        "title": "The State Of Agentic Ai In 2026",
+        "url": "https://www.crewai.com/blog/the-state-of-agentic-ai-in-2026",
+        "published_at": "2026-02-11T00:00:00+00:00",
+        "source_via": "html"
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+version: 1
+generated_at: 2026-02-21
+sources:
+- id: claude-blog
+  name: Claude Blog
+  homepage: https://claude.com/blog
+  category: model_company
+  focus:
+  - product
+  - engineering
+  rss:
+    url: null
+    status: unknown
+    checked_at: '2026-02-22T02:56:11.696172+00:00'
+    check_method: http_probe
+    candidates:
+    - https://claude.com/blog/rss.xml
+    - https://claude.com/rss.xml
+  crawl:
+    mode: rss_or_html
+    max_items: 20
+  health:
+    last_success_at: '2026-02-22T02:56:11.696172+00:00'
+    last_error: ''
+    level: healthy
+    consecutive_failures: 0
+    cooldown_until: null
+    last_status: ok
+    last_checked_at: '2026-02-22T02:56:11.696172+00:00'
+    retry_attempted: false
+    retry_succeeded: false
+    retry_count: 0
